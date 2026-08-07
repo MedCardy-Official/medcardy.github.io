@@ -1,283 +1,446 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پادکست بوک | کتاب‌های صوتی و پادکست‌های آموزشی</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedCardy Podcast | پادکست کتاب‌ها و دروس پزشکی</title>
+<meta name="description" content="پادکست‌های صوتی MedCardy از کتاب‌ها و دروس علوم پزشکی، برای گوش دادن در راه، بین کلاس‌ها و قبل از امتحان.">
+<link rel="icon" href="data:,">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
 
-        body {
-            font-family: 'Vazirmatn', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: #333;
-        }
+:root{
+  --navy-950:#071a3a;
+  --navy-900:#0a2d63;
+  --navy-800:#123f82;
+  --blue-700:#1559c8;
+  --blue-600:#1f6fe5;
+  --blue-500:#3786ef;
+  --blue-100:#deebfb;
+  --blue-50:#f1f7ff;
+  --cyan:#13b6d7;
+  --bg:#f5f8fc;
+  --card:#ffffff;
+  --border:#dce7f3;
+  --text:#182943;
+  --text-soft:#5c6d83;
+  --muted:#8a9bb5;
+  --radius-sm:9px;
+  --radius-md:15px;
+  --radius-lg:22px;
+  --shadow-sm:0 4px 14px rgba(9,45,99,.07);
+  --shadow-md:0 14px 36px rgba(9,45,99,.11);
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Vazirmatn","Tahoma",sans-serif;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(31,111,229,.08), transparent 25%),
+    linear-gradient(180deg,#ffffff 0%, var(--bg) 100%);
+  color:var(--text);
+  line-height:1.9;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:24px;}
 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            color: white;
-        }
+/* ---- Header ---- */
+header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:20px;}
+.brand .dot{
+  width:11px;height:11px;border-radius:50%;
+  background:linear-gradient(135deg,var(--navy-900),var(--cyan));
+  box-shadow:0 0 0 4px var(--blue-50);
+}
+.brand span.grad{
+  background:linear-gradient(135deg,var(--navy-900),var(--blue-600));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+nav.links{display:flex;gap:28px;font-weight:600;font-size:14.5px;color:var(--text-soft);}
+nav.links a:hover{color:var(--blue-600);}
+.tg-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--navy-900),var(--blue-600));
+  color:#fff!important;
+  padding:9px 20px;border-radius:999px;font-weight:700;font-size:14px;
+  box-shadow:var(--shadow-sm);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.tg-btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-md);}
+.mobile-links{display:none;}
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+/* ---- Hero ---- */
+.hero{padding:76px 0 60px;}
+.hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:700;color:var(--blue-700);
+  background:var(--blue-50);border:1px solid var(--blue-100);
+  padding:6px 14px;border-radius:999px;margin-bottom:20px;
+}
+h1{
+  font-size:46px;line-height:1.35;font-weight:900;letter-spacing:-.5px;
+  color:var(--navy-950);margin:0 0 20px;
+}
+h1 .accent{
+  background:linear-gradient(135deg,var(--navy-900),var(--blue-600) 60%, var(--cyan));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.lead{font-size:17px;color:var(--text-soft);max-width:52ch;margin-bottom:32px;}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:999px;font-weight:700;font-size:14.5px;
+  border:1px solid var(--border);background:#fff;color:var(--navy-900);
+  box-shadow:var(--shadow-sm);
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 26px;border-radius:999px;font-weight:700;font-size:14.5px;
+  background:linear-gradient(135deg,var(--navy-900),var(--blue-600));
+  color:#fff;box-shadow:var(--shadow-md);
+}
 
-        header p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+/* signature: waveform */
+.wave-card{
+  background:linear-gradient(150deg,var(--navy-950),var(--navy-900) 55%,var(--blue-700));
+  border-radius:var(--radius-lg);
+  padding:34px 30px;
+  box-shadow:var(--shadow-md);
+  position:relative;overflow:hidden;
+}
+.wave-card::after{
+  content:"";position:absolute;inset-inline-end:-60px;inset-block-start:-70px;
+  width:190px;height:190px;border:1px solid rgba(255,255,255,.14);border-radius:50%;
+}
+.wave-top{display:flex;align-items:center;justify-content:space-between;color:#cfe0ff;font-size:13px;font-weight:600;margin-bottom:22px;}
+.wave-top .live{display:flex;align-items:center;gap:6px;color:#8ef0ff;}
+.live .blip{width:7px;height:7px;border-radius:50%;background:#8ef0ff;animation:blip 1.4s infinite;}
+@keyframes blip{0%,100%{opacity:1;}50%{opacity:.25;}}
+.bars{display:flex;align-items:flex-end;gap:4px;height:88px;margin-bottom:22px;}
+.bars span{
+  flex:1;border-radius:6px;
+  background:linear-gradient(180deg,#8ef0ff,#3786ef);
+  animation:play 1.6s ease-in-out infinite;
+}
+@keyframes play{0%,100%{transform:scaleY(.28);}50%{transform:scaleY(1);}}
+.wave-title{color:#fff;font-weight:800;font-size:16px;margin-bottom:4px;}
+.wave-sub{color:#a9c2ec;font-size:13px;}
 
-        .telegram-btn {
-            display: inline-block;
-            background: #0088cc;
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-top: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,136,204,0.4);
-        }
+@media(prefers-reduced-motion: reduce){
+  .bars span, .live .blip{animation:none;}
+}
 
-        .telegram-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,136,204,0.6);
-            background: #0099ee;
-        }
+/* ---- Section shell ---- */
+section{padding:64px 0;}
+.section-head{max-width:640px;margin-bottom:38px;}
+.section-eyebrow{font-size:13px;font-weight:700;color:var(--blue-600);letter-spacing:.4px;text-transform:uppercase;margin-bottom:10px;}
+h2{font-size:30px;font-weight:850;color:var(--navy-950);margin:0 0 10px;}
+.section-sub{color:var(--text-soft);font-size:15.5px;}
 
-        .products-section {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            margin-top: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
+/* ---- How it works ---- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.step{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:26px 22px;box-shadow:var(--shadow-sm);
+}
+.step .num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:10px;font-weight:800;font-size:14px;
+  background:var(--blue-50);color:var(--blue-700);border:1px solid var(--blue-100);
+  margin-bottom:16px;
+}
+.step h3{font-size:16.5px;font-weight:800;margin:0 0 8px;color:var(--navy-900);}
+.step p{font-size:14px;color:var(--text-soft);margin:0;}
 
-        .products-section h2 {
-            text-align: center;
-            color: #667eea;
-            margin-bottom: 40px;
-            font-size: 2rem;
-        }
+/* ---- Courses ---- */
+.filter-row{display:flex;gap:10px;margin-bottom:26px;flex-wrap:wrap;}
+.filter-btn{
+  padding:8px 16px;border-radius:999px;font-size:13.5px;font-weight:700;
+  border:1px solid var(--border);background:#fff;color:var(--text-soft);cursor:pointer;
+}
+.filter-btn.active{background:linear-gradient(135deg,var(--navy-900),var(--blue-600));color:#fff;border-color:transparent;}
 
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+.course-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.course-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);
+  overflow:hidden;box-shadow:var(--shadow-sm);
+  display:flex;flex-direction:column;
+}
+.course-photo{
+  aspect-ratio:16/9;width:100%;
+  background:linear-gradient(135deg,var(--blue-50),var(--blue-100));
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:13px;font-weight:600;
+  background-size:cover;background-position:center;
+}
+.course-body{padding:20px 22px 22px;}
+.course-tag{
+  display:inline-block;font-size:11.5px;font-weight:700;color:var(--blue-700);
+  background:var(--blue-50);border:1px solid var(--blue-100);
+  padding:3px 10px;border-radius:999px;margin-bottom:10px;
+}
+.course-body h3{font-size:18px;font-weight:800;color:var(--navy-950);margin:0 0 6px;}
+.course-body p{font-size:13.5px;color:var(--text-soft);margin:0 0 16px;}
+.ep-list{list-style:none;margin:0 0 16px;padding:0;border-top:1px solid var(--border);}
+.ep-list li{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 0;border-bottom:1px solid var(--border);font-size:13.5px;
+}
+.ep-list li a{color:var(--blue-700);font-weight:700;font-size:13px;white-space:nowrap;}
+.ep-list li .ep-name{color:var(--text);}
+.ep-list li .ep-name .ep-idx{color:var(--muted);font-weight:700;margin-inline-end:6px;}
+.course-more{font-size:13px;font-weight:700;color:var(--navy-900);}
 
-        .product-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 25px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
+/* ---- Telegram CTA band ---- */
+.cta-band{
+  background:linear-gradient(120deg,var(--navy-950),var(--navy-900) 60%,var(--blue-700));
+  border-radius:var(--radius-lg);
+  padding:46px 40px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  flex-wrap:wrap;
+  box-shadow:var(--shadow-md);
+  color:#fff;
+}
+.cta-band h2{color:#fff;}
+.cta-band .section-sub{color:#c7d9f5;}
+.cta-band .btn-primary{background:#fff;color:var(--navy-900);}
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            border-color: #667eea;
-            box-shadow: 0 10px 30px rgba(102,126,234,0.2);
-        }
+/* ---- Footer ---- */
+footer{border-top:1px solid var(--border);padding:36px 0;margin-top:20px;}
+.foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+.foot-links{display:flex;gap:22px;font-size:13.5px;color:var(--text-soft);font-weight:600;}
+.foot-links a:hover{color:var(--blue-600);}
+.copyright{font-size:12.5px;color:var(--muted);}
 
-        .product-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .product-card h3 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 1.4rem;
-        }
-
-        .product-card p {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .product-card .price {
-            color: #667eea;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .features {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            margin-top: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .features h2 {
-            text-align: center;
-            color: #667eea;
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
-
-        .features-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 10px;
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: white;
-            margin-top: 60px;
-        }
-
-        footer p {
-            opacity: 0.9;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            header p {
-                font-size: 1.1rem;
-            }
-
-            .products-section,
-            .features {
-                padding: 25px;
-            }
-        }
-    </style>
+@media(max-width:860px){
+  .hero-inner{grid-template-columns:1fr;}
+  h1{font-size:34px;}
+  .steps{grid-template-columns:1fr;}
+  .course-grid{grid-template-columns:1fr;}
+  nav.links{display:none;}
+  .cta-band{padding:32px 24px;text-align:center;justify-content:center;}
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🎧 پادکست بوک</h1>
-            <p>مرجع تخصصی کتاب‌های صوتی و پادکست‌های آموزشی</p>
-            <a href="https://t.me/YOUR_TELEGRAM_CHANNEL" class="telegram-btn" target="_blank">
-                📬 عضویت در کانال تلگرام
-            </a>
-        </header>
 
-        <section class="products-section">
-            <h2>📚 محصولات ما</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-icon">📖</div>
-                    <h3>کتاب‌های صوتی</h3>
-                    <p>شنیدن بهترین کتاب‌های روز دنیا با کیفیت عالی و گویندگی حرفه‌ای</p>
-                    <div class="price">شروع از ۵۰,۰۰۰ تومان</div>
-                </div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="dot"></span><span class="grad">MedCardy</span> Podcast</a>
+    <nav class="links">
+      <a href="#how">چطور کار می‌کنیم</a>
+      <a href="#courses">دوره‌ها و کتاب‌ها</a>
+      <a href="#about">درباره ما</a>
+    </nav>
+    <a class="tg-btn" href="https://t.me/medcardy_podcast" target="_blank" rel="noopener">عضویت در تلگرام ↗</a>
+  </div>
+</header>
 
-                <div class="product-card">
-                    <div class="product-icon">🎙️</div>
-                    <h3>پادکست‌های آموزشی</h3>
-                    <p>مجموعه‌ای از پادکست‌های کاربردی در زمینه‌های مختلف تحصیلی و شغلی</p>
-                    <div class="price">شروع از ۳۰,۰۰۰ تومان</div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">📝</div>
-                    <h3>جزوات تخصصی</h3>
-                    <p>خلاصه‌نویسی‌ها و جزوات آموزشی همراه با فایل صوتی توضیحی</p>
-                    <div class="price">شروع از ۴۰,۰۰۰ تومان</div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">🎓</div>
-                    <h3>دوره‌های صوتی</h3>
-                    <p>دوره‌های جامع آموزشی به صورت صوتی برای یادگیری سریع‌تر</p>
-                    <div class="price">شروع از ۱۰۰,۰۰۰ تومان</div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">💼</div>
-                    <h3>کتاب‌های کسب‌وکار</h3>
-                    <p>برترین کتاب‌های حوزه بیزنس و مدیریت با ترجمه و گویندگی فارسی</p>
-                    <div class="price">شروع از ۶۰,۰۰۰ تومان</div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon">🧘</div>
-                    <h3>توسعه فردی</h3>
-                    <p>کتاب‌ها و پادکست‌های انگیزشی و توسعه شخصی برای رشد فردی</p>
-                    <div class="price">شروع از ۳۵,۰۰۰ تومان</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features">
-            <h2>✨ چرا ما؟</h2>
-            <div class="features-list">
-                <div class="feature-item">
-                    <div class="feature-icon">✅</div>
-                    <div>کیفیت صدای عالی و حرفه‌ای</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">⚡</div>
-                    <div>دسترسی سریع و آسان</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔒</div>
-                    <div>پرداخت امن و مطمئن</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📱</div>
-                    <div>پشتیبانی از طریق تلگرام</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🎁</div>
-                    <div>تخفیف‌های ویژه برای اعضا</div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔄</div>
-                    <div>به‌روزرسانی مداوم محتوا</div>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>© ۱۴۰۳ پادکست بوک - تمامی حقوق محفوظ است</p>
-            <p style="margin-top: 10px;">
-                <a href="https://t.me/YOUR_TELEGRAM_CHANNEL" style="color: white; text-decoration: underline;" target="_blank">
-                    ارتباط با ما در تلگرام
-                </a>
-            </p>
-        </footer>
+<main>
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">🎧 پادکست علوم پزشکی</div>
+        <h1>کتاب‌ها و دروس پزشکی رو <span class="accent">گوش کن</span>، نه فقط بخون</h1>
+        <p class="lead">MedCardy Podcast خلاصه‌ی صوتی درس‌به‌درس و فصل‌به‌فصل کتاب‌های مرجع علوم پزشکی رو برات آماده می‌کنه؛ برای گوش دادن توی راه، بین کلاس‌ها یا قبل امتحان.</p>
+        <div class="cta-row">
+          <a class="btn-primary" href="https://t.me/medcardy_podcast" target="_blank" rel="noopener">شروع گوش دادن در تلگرام</a>
+          <a class="btn-ghost" href="#courses">دیدن لیست دوره‌ها</a>
+        </div>
+      </div>
+      <div class="wave-card">
+        <div class="wave-top">
+          <span>MedCardy Podcast</span>
+          <span class="live"><span class="blip"></span> در پخش</span>
+        </div>
+        <div class="bars" id="bars"></div>
+        <div class="wave-title">فیزیولوژی سلول و عضله — جلسه ۱</div>
+        <div class="wave-sub">۱۸ دقیقه · خلاصه‌ی صوتی</div>
+      </div>
     </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow">روش کار</div>
+        <h2>از کتاب تا گوش شما</h2>
+        <p class="section-sub">هر اپیزود از روی جزوه و منبع درسی همون جلسه ساخته می‌شه، نه خلاصه‌ی سطحی.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">۱</div>
+          <h3>انتخاب کتاب یا درس</h3>
+          <p>هر ترم، کتاب‌ها و دروس پرتکرار دانشجویان پزشکی رو برای تبدیل به پادکست انتخاب می‌کنیم.</p>
+        </div>
+        <div class="step">
+          <div class="num">۲</div>
+          <h3>ضبط جلسه به جلسه</h3>
+          <p>هر فصل یا جلسه به یک اپیزود صوتی مستقل تبدیل می‌شه، با تمرکز روی نکات امتحانی.</p>
+        </div>
+        <div class="step">
+          <div class="num">۳</div>
+          <h3>انتشار در تلگرام</h3>
+          <p>اپیزودها به‌ترتیب توی کانال تلگرام منتشر می‌شن و همینجا هم لینکشون قرار می‌گیره.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow">آرشیو اپیزودها</div>
+        <h2>دوره‌ها و کتاب‌ها</h2>
+        <p class="section-sub">هرکارت یک کتاب یا درسه؛ اپیزودهاش رو ببین و مستقیم توی تلگرام گوش کن.</p>
+      </div>
+
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="all">همه</button>
+        <button class="filter-btn" data-filter="book">کتاب</button>
+        <button class="filter-btn" data-filter="lesson">درس / جزوه</button>
+      </div>
+
+      <div class="course-grid" id="courseGrid"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>هر هفته اپیزودهای جدید</h2>
+          <p class="section-sub">توی کانال تلگرام عضو شو تا هیچ اپیزودی رو از دست ندی.</p>
+        </div>
+        <a class="btn-primary" href="https://t.me/medcardy_podcast" target="_blank" rel="noopener">عضویت رایگان در کانال</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <div class="brand" style="font-size:16px;"><span class="dot"></span><span class="grad">MedCardy</span> Podcast</div>
+    <div class="foot-links">
+      <a href="https://t.me/medcardy_podcast" target="_blank" rel="noopener">تلگرام</a>
+      <a href="#courses">دوره‌ها</a>
+      <a href="#how">درباره ما</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:14px;">
+    <div class="copyright">© 2026 MedCardy — پادکست کتاب‌ها و دروس علوم پزشکی</div>
+  </div>
+</footer>
+
+<script>
+/* ===========================================================
+   داده‌ی دوره‌ها — همینجا ویرایش کن
+   type: "book" یا "lesson"
+   photo: مسیر عکس (مثلاً "assets/courses/physiology.jpg") — اگه خالی بمونه جای‌خالی نشون داده می‌شه
+   episodes: هر کدوم یک لینک مستقیم به همون پست توی تلگرام
+   =========================================================== */
+const COURSES = [
+  {
+    title: "فیزیولوژی سلول و عضله",
+    type: "lesson",
+    tag: "درس",
+    photo: "",
+    desc: "خلاصه‌ی صوتی جلسه به جلسه‌ی فیزیولوژی پایه، از غشای سلول تا مکانیسم انقباض عضله.",
+    episodes: [
+      { name: "جلسه ۱ — غشا و اندامک‌ها", link: "https://t.me/medcardy_podcast/1" },
+      { name: "جلسه ۲ — سارکومر و انقباض", link: "https://t.me/medcardy_podcast/2" },
+      { name: "جلسه ۳ — رابطه طول-نیرو", link: "https://t.me/medcardy_podcast/3" },
+    ]
+  },
+  {
+    title: "Guyton — فیزیولوژی پزشکی",
+    type: "book",
+    tag: "کتاب",
+    photo: "",
+    desc: "خلاصه‌ی صوتی فصل‌به‌فصل کتاب مرجع گایتون، مناسب مرور قبل امتحان.",
+    episodes: [
+      { name: "فصل ۱ — مقدمه و هموستاز", link: "https://t.me/medcardy_podcast/4" },
+      { name: "فصل ۲ — غشای سلولی", link: "https://t.me/medcardy_podcast/5" },
+    ]
+  },
+  {
+    title: "آناتومی اندام فوقانی",
+    type: "lesson",
+    tag: "درس",
+    photo: "",
+    desc: "مرور صوتی نقاط کلیدی و تله‌های امتحانی آناتومی اندام فوقانی.",
+    episodes: [
+      { name: "جلسه ۱ — کمربند شانه‌ای", link: "https://t.me/medcardy_podcast/6" },
+      { name: "جلسه ۲ — بازو و ساعد", link: "https://t.me/medcardy_podcast/7" },
+    ]
+  },
+  {
+    title: "Robbins — پاتولوژی پایه",
+    type: "book",
+    tag: "کتاب",
+    photo: "",
+    desc: "خلاصه‌ی صوتی فصل‌های پرتکرار رابینز با تمرکز بر نکات آسیب‌شناسی بالینی.",
+    episodes: [
+      { name: "فصل ۱ — آسیب سلولی", link: "https://t.me/medcardy_podcast/8" },
+    ]
+  }
+];
+
+function courseCard(c){
+  const bg = c.photo ? `style="background-image:url('${c.photo}')"` : "";
+  const photoInner = c.photo ? "" : "عکس دوره";
+  const shown = c.episodes.slice(0,3);
+  const rest = c.episodes.length - shown.length;
+  return `
+    <div class="course-card" data-type="${c.type}">
+      <div class="course-photo" ${bg}>${photoInner}</div>
+      <div class="course-body">
+        <span class="course-tag">${c.tag}</span>
+        <h3>${c.title}</h3>
+        <p>${c.desc}</p>
+        <ul class="ep-list">
+          ${shown.map((e,i)=>`
+            <li>
+              <span class="ep-name"><span class="ep-idx">${i+1}.</span>${e.name}</span>
+              <a href="${e.link}" target="_blank" rel="noopener">پخش ↗</a>
+            </li>`).join("")}
+        </ul>
+        ${rest > 0 ? `<a class="course-more" href="https://t.me/medcardy_podcast" target="_blank" rel="noopener">+ ${rest} اپیزود دیگر در تلگرام</a>` : ""}
+      </div>
+    </div>`;
+}
+
+function render(filter){
+  const grid = document.getElementById("courseGrid");
+  const items = filter === "all" ? COURSES : COURSES.filter(c => c.type === filter);
+  grid.innerHTML = items.map(courseCard).join("");
+}
+
+document.querySelectorAll(".filter-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    render(btn.dataset.filter);
+  });
+});
+
+render("all");
+
+/* hero waveform bars */
+const barsEl = document.getElementById("bars");
+const heights = [30,55,80,45,95,60,35,70,50,85,40,65];
+barsEl.innerHTML = heights.map((h,i)=>`<span style="animation-delay:${(i*0.09).toFixed(2)}s"></span>`).join("");
+</script>
+
 </body>
 </html>
