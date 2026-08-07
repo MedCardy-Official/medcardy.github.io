@@ -3,236 +3,841 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فروشگاه پادکست و جزوات</title>
+    <title>مدکاردی | پادکست‌ها و جزوات پزشکی</title>
+    
+    <!-- فونت وزیرمتن -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- آیکون‌ها -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
+        /* =========================================================
+           MedCardy Notes System V3 — Clinical Blue (Extracted for Web)
+           ========================================================= */
+        
         :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
-            --bg: #f8fafc;
-            --text: #1e293b;
-            --card-bg: #ffffff;
+            --mc3-navy-950: #071a3a;
+            --mc3-navy-900: #0a2d63;
+            --mc3-navy-800: #123f82;
+            --mc3-blue-700: #1559c8;
+            --mc3-blue-600: #1f6fe5;
+            --mc3-blue-500: #3786ef;
+            --mc3-blue-100: #deebfb;
+            --mc3-blue-50: #f1f7ff;
+            --mc-cyan-500: #13b6d7;
+            --mc3-bg: #f5f8fc;
+            --mc3-card: #ffffff;
+            --mc3-card-soft: #f9fbfe;
+            --mc3-border: #dce7f3;
+            --mc3-border-strong: #bfd2e8;
+            --mc3-text: #182943;
+            --mc3-text-soft: #5c6d83;
+            --mc3-muted: #7d8ba0;
+            --mc3-success: #15836b;
+            --mc3-success-bg: #eef9f5;
+            --mc3-warning: #c47a0b;
+            --mc3-warning-bg: #fff8e9;
+            --mc3-danger: #cf3d56;
+            --mc3-danger-bg: #fff1f4;
+            --mc3-purple: #7656c9;
+            --mc3-purple-bg: #f6f2ff;
+            --mc3-radius-sm: 9px;
+            --mc3-radius-md: 15px;
+            --mc3-radius-lg: 22px;
+            --mc3-shadow-xs: 0 1px 3px rgba(9, 45, 99, 0.04);
+            --mc3-shadow-sm: 0 4px 14px rgba(9, 45, 99, 0.07);
+            --mc3-shadow-md: 0 14px 36px rgba(9, 45, 99, 0.11);
         }
 
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Tahoma', 'Segoe UI', sans-serif;
+            font-family: "Vazirmatn", "Vazir", "IRANSansX", "Tahoma", "Segoe UI", sans-serif !important;
         }
 
         body {
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background:
+                radial-gradient(circle at 92% 0%, rgba(31, 111, 229, 0.075), transparent 23%),
+                linear-gradient(180deg, #ffffff 0%, var(--mc3-bg) 100%);
+            color: var(--mc3-text);
+            direction: rtl;
+            text-align: right;
+            line-height: 2;
+            font-size: 16px;
         }
 
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
+        a { text-decoration: none; color: inherit; }
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p.subtitle {
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-
-        .container {
-            max-width: 1200px;
+        /* --- Header & Hero --- */
+        .site-header {
+            max-width: 960px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero-card {
+            background:
+                radial-gradient(circle at 92% 0%, rgba(31, 111, 229, 0.075), transparent 23%),
+                linear-gradient(180deg, #ffffff 0%, var(--mc3-bg) 100%);
+            border-radius: var(--mc3-radius-lg);
+            padding: 40px 20px;
+            color: var(--mc3-text);
+            box-shadow: var(--mc3-shadow-md);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .hero-card h1 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--mc3-navy-900);
+        }
+
+        .hero-card p {
+            opacity: 0.9;
+            font-size: 15px;
+            margin-bottom: 25px;
+            color: var(--mc3-text-soft);
         }
 
         .telegram-btn {
-            display: inline-block;
-            background-color: #0088cc;
-            color: white;
-            padding: 12px 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            color: var(--mc3-navy-900);
+            padding: 12px 24px;
             border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 1rem;
+            font-weight: 800;
+            font-size: 15px;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 14px 0 rgba(0,136,204,0.39);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 1px solid var(--mc3-border);
         }
 
         .telegram-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px 0 rgba(0,136,204,0.23);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: var(--mc3-blue-50);
+        }
+
+        .telegram-icon {
+            color: #229ED9;
+            font-size: 20px;
+        }
+
+        /* --- Product Grid --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        .section-title {
+            color: var(--mc3-navy-900);
+            font-size: 22px;
+            font-weight: 880;
+            margin-bottom: 25px;
+            border-right: 5px solid var(--mc3-blue-600);
+            padding-right: 15px;
+            background: linear-gradient(90deg, #edf5ff 0%, #f9fcff 82%, transparent 100%);
+            padding: 12px 18px;
+            border-radius: 8px 15px 15px 8px;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         .product-card {
-            background: var(--card-bg);
-            border-radius: 15px;
+            background: white;
+            border: 1px solid var(--mc3-border);
+            border-right: 5px solid var(--mc3-blue-600);
+            border-radius: var(--mc3-radius-md);
+            padding: 20px;
+            box-shadow: var(--mc3-shadow-sm);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--mc3-shadow-md);
+            border-color: var(--mc3-blue-500);
         }
 
-        .product-image {
-            width: 100%;
-            height: 200px;
-            background-color: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-size: 3rem;
-        }
-        
-        /* اگر عکس دارید، این استایل را فعال کنید */
-        /* .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        } */
-
-        .product-info {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
+        .product-badge {
+            background: #f5f8ff;
+            color: var(--mc3-navy-800);
+            padding: 0.15rem 1.2rem;
+            border-radius: 30px;
+            border: 1px solid #e8edf5;
+            font-size: 12px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 10px;
         }
 
         .product-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: var(--text);
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--mc3-navy-900);
+            margin: 0 0 10px 0;
         }
 
         .product-desc {
-            color: #64748b;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            flex-grow: 1;
+            font-size: 13px;
+            color: var(--mc3-text-soft);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
-        .price-tag {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            display: block;
+        .view-btn {
+            color: var(--mc3-blue-600);
+            font-weight: 700;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .buy-btn {
-            display: block;
+        /* --- Content Viewer (Modal Style) --- */
+        .content-viewer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding: 10px;
-            background-color: var(--text);
-            color: white;
-            text-align: center;
-            border-radius: 8px;
-            text-decoration: none;
+            height: 100%;
+            background: rgba(7, 26, 58, 0.85);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .content-wrapper {
+            background: white;
+            max-width: 960px;
+            margin: 40px auto;
+            border-radius: var(--mc3-radius-lg);
+            padding: 44px 48px 92px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #f1f7ff;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--mc3-navy-900);
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: background 0.2s;
         }
 
-        .buy-btn:hover {
-            background-color: var(--primary);
+        .close-btn:hover {
+            background: #e2ecf7;
         }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            color: #64748b;
-            font-size: 0.9rem;
+        /* --- MedCardy Styles Applied to Content --- */
+        .mc-header-reverse {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.4rem 0;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid #e8edf5;
+        }
+        .mc-brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1a2a6c, #4a6cf7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.3px;
+        }
+        .mc-course {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #8a9bb5;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            background: #f5f8ff;
+            padding: 0.15rem 1.2rem;
+            border-radius: 30px;
+            border: 1px solid #e8edf5;
         }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 1.5rem; }
-            .products-grid { grid-template-columns: 1fr; }
+        /* Headers */
+        h1 {
+            position: relative;
+            margin: 8px 0 18px;
+            padding: 24px 28px 24px 24px;
+            color: #ffffff !important;
+            background:
+                linear-gradient(112deg, var(--mc3-navy-900) 0%, var(--mc3-blue-600) 72%, var(--mc3-blue-500) 100%);
+            border: 0 !important;
+            border-radius: var(--mc3-radius-lg);
+            box-shadow: var(--mc3-shadow-md);
+            font-size: 30px;
+            line-height: 1.55;
+            font-weight: 900;
+            letter-spacing: -0.3px;
+            overflow: hidden;
+        }
+
+        h1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 7px;
+            background: linear-gradient(180deg, #84e5f2, var(--mc-cyan-500));
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            right: -56px;
+            top: -72px;
+            width: 190px;
+            height: 190px;
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 50%;
+        }
+
+        h2 {
+            position: relative;
+            margin: 46px 0 18px;
+            padding: 12px 18px;
+            color: var(--mc3-navy-900) !important;
+            background: linear-gradient(90deg, #edf5ff 0%, #f9fcff 82%, transparent 100%);
+            border: 1px solid #e2ecf7;
+            border-right: 5px solid var(--mc3-blue-600);
+            border-radius: 8px 15px 15px 8px;
+            box-shadow: var(--mc3-shadow-xs);
+            font-size: 22px;
+            line-height: 1.65;
+            font-weight: 880;
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            right: 18px;
+            bottom: -2px;
+            width: 66px;
+            height: 3px;
+            border-radius: 99px;
+            background: linear-gradient(90deg, var(--mc3-blue-600), var(--mc-cyan-500));
+        }
+
+        h3 {
+            margin: 28px 0 12px;
+            padding-right: 12px;
+            color: var(--mc3-blue-700) !important;
+            border-right: 3px solid var(--mc-cyan-500);
+            font-size: 18px;
+            line-height: 1.7;
+            font-weight: 820;
+        }
+
+        h4 {
+            color: var(--mc3-navy-800) !important;
+            font-size: 16.5px;
+            font-weight: 800;
+        }
+
+        /* Callouts */
+        .callout {
+            margin: 20px 0 25px;
+            padding: 0;
+            color: var(--mc3-text);
+            background: var(--mc3-card);
+            border: 1px solid var(--mc3-border);
+            border-right: 5px solid rgb(var(--callout-color));
+            border-radius: var(--mc3-radius-md);
+            box-shadow: var(--mc3-shadow-sm);
+            overflow: hidden;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+        .callout-title {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            min-height: 48px;
+            margin: 0;
+            padding: 11px 16px;
+            color: var(--mc3-navy-900);
+            background: linear-gradient(90deg, rgba(var(--callout-color), 0.14), rgba(var(--callout-color), 0.035));
+            border-bottom: 1px solid rgba(var(--callout-color), 0.13);
+            font-size: 15.5px;
+            font-weight: 880;
+        }
+        .callout-icon {
+            color: rgb(var(--callout-color));
+        }
+        .callout-content {
+            padding: 14px 18px 17px;
+        }
+        
+        /* Specific Callout Types */
+        .callout[data-type="mc-goal"] { --callout-color: 31, 111, 229; }
+        .callout[data-type="mc-goal"] .callout-title {
+            color: #ffffff;
+            background: linear-gradient(108deg, var(--mc3-navy-900), var(--mc3-blue-600));
+            border-bottom: 0;
+        }
+        .callout[data-type="mc-goal"] .callout-icon { color: #88e8f4; }
+        
+        .callout[data-type="mc-exam"] { --callout-color: 19, 182, 215; background: linear-gradient(120deg, #ffffff, #f2fcff); }
+        
+        .callout[data-type="mc-clinical"] { --callout-color: 118, 86, 201; background: var(--mc3-purple-bg); }
+        
+        .callout[data-type="mc-note"] { --callout-color: 92, 114, 145; background: #f8fafc; }
+        
+        .callout[data-type="mc-summary"] { --callout-color: 21, 131, 107; background: var(--mc3-success-bg); }
+        
+        .callout[data-type="mc-warning"] { --callout-color: 196, 122, 11; background: var(--mc3-warning-bg); }
+        
+        .callout[data-type="mc-error"] { --callout-color: 207, 61, 86; background: var(--mc3-danger-bg); }
+        
+        .callout[data-type="mc-memory"] { --callout-color: 10, 45, 99; background: #f1f6fd; }
+
+        /* Tables */
+        .mc-table-wrap {
+            width: 100%;
+            margin: 20px 0 28px;
+            overflow-x: auto;
+            border: 1px solid var(--mc3-border);
+            border-radius: var(--mc3-radius-md);
+            box-shadow: var(--mc3-shadow-sm);
+            background: #ffffff;
+        }
+
+        table.mc-table {
+            width: 100%;
+            min-width: 560px;
+            margin: 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: #ffffff;
+            font-size: 14.5px;
+        }
+
+        table.mc-table thead {
+            background: linear-gradient(105deg, var(--mc3-navy-900), var(--mc3-blue-600));
+        }
+
+        table.mc-table th {
+            padding: 13px 15px !important;
+            color: #ffffff !important;
+            background: transparent !important;
+            border: 0 !important;
+            border-right: 1px solid rgba(255,255,255,0.14) !important;
+            text-align: center !important;
+            font-weight: 850 !important;
+        }
+
+        table.mc-table td {
+            padding: 12px 15px !important;
+            color: var(--mc3-text);
+            background: #ffffff;
+            border: 0 !important;
+            border-bottom: 1px solid #eaf1f8 !important;
+            border-right: 1px solid #edf3f9 !important;
+            vertical-align: top !important;
+        }
+
+        table.mc-table tbody tr:nth-child(even) td {
+            background: #f8fbff;
+        }
+
+        table.mc-table tbody tr:hover td {
+            background: #eef6ff;
+        }
+
+        table.mc-table tbody tr:last-child td {
+            border-bottom: 0 !important;
+        }
+
+        /* Typography */
+        strong { color: var(--mc3-navy-900); font-weight: 850; }
+        em { color: var(--mc3-blue-700); }
+        a { color: var(--mc3-blue-600); font-weight: 700; }
+        a:hover { color: var(--mc-cyan-500); text-decoration: underline; }
+
+        ul, ol {
+            padding-right: 1.65em;
+        }
+        li {
+            margin: 5px 0;
+        }
+        li::marker {
+            color: var(--mc3-blue-600);
+            font-weight: 850;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            margin: 34px 0;
+            background: linear-gradient(90deg, transparent, var(--mc3-border-strong), var(--mc3-blue-500), var(--mc3-border-strong), transparent);
+        }
+
+        /* Responsive */
+        @media (max-width: 760px) {
+            .content-wrapper {
+                padding: 24px 18px 70px;
+            }
+
+            h1 {
+                font-size: 25px;
+                padding: 20px 21px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>فروشگاه پادکست و جزوات آموزشی</h1>
-        <p class="subtitle">بهترین خلاصه کتاب‌ها و جزوات تخصصی را اینجا بشنوید و دانلود کنید</p>
-        <!-- لینک تلگرام خود را در خط زیر جایگزین کنید -->
-        <a href="https://t.me/YOUR_TELEGRAM_ID" class="telegram-btn" target="_blank">
-            اتصال به کانال تلگرام ما
-        </a>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="hero-card">
+            <h1>پادکست‌ها و جزوات مدکاردی</h1>
+            <p>مرجع تخصصی آموزش پزشکی با متدولوژی MedCardy</p>
+            
+            <!-- لینک تلگرام خود را اینجا وارد کنید -->
+            <a href="https://t.me/YOUR_TELEGRAM_ID" target="_blank" class="telegram-btn">
+                <i class="fab fa-telegram telegram-icon"></i>
+                عضویت در کانال تلگرام
+            </a>
+        </div>
     </header>
 
-    <div class="container">
-        <h2 style="text-align: center; margin-bottom: 1.5rem;">محصولات ویژه</h2>
+    <!-- Products Grid -->
+    <main class="container">
+        <h2 class="section-title"><i class="fas fa-book-medical"></i> فهرست جلسات فیزیولوژی</h2>
         
-        <div class="products-grid">
-            <!-- محصول ۱ -->
-            <div class="product-card">
-                <div class="product-image">🎧</div>
-                <div class="product-info">
-                    <h3 class="product-title">پادکست خلاصه کتاب اتمیک هبیتس</h3>
-                    <p class="product-desc">شنیدن خلاصه کاربردی این کتاب پرطرفدار در ۴۵ دقیقه همراه با نکات کلیدی.</p>
-                    <span class="price-tag">۹۹,۰۰۰ تومان</span>
-                    <a href="https://t.me/YOUR_TELEGRAM_ID" class="buy-btn">خرید و دریافت فایل</a>
-                </div>
-            </div>
+        <div class="products-grid" id="productsGrid">
+            <!-- محصولات توسط جاوااسکریپت در اینجا ساخته می‌شوند -->
+        </div>
+    </main>
 
-            <!-- محصول ۲ -->
-            <div class="product-card">
-                <div class="product-image">📚</div>
-                <div class="product-info">
-                    <h3 class="product-title">جزوه جامع برنامه‌نویسی پایتون</h3>
-                    <p class="product-desc">شامل تمام مباحث مقدماتی تا پیشرفته به همراه مثال‌های عملی و پروژه محور.</p>
-                    <span class="price-tag">۱۴۹,۰۰۰ تومان</span>
-                    <a href="https://t.me/YOUR_TELEGRAM_ID" class="buy-btn">خرید و دریافت فایل</a>
-                </div>
-            </div>
-
-            <!-- محصول ۳ -->
-            <div class="product-card">
-                <div class="product-image">🧠</div>
-                <div class="product-info">
-                    <h3 class="product-title">پادکست روانشناسی فروش</h3>
-                    <p class="product-desc">تکنیک‌های متقاعدسازی و روانشناسی در فروش را در این اپیزود یاد بگیرید.</p>
-                    <span class="price-tag">۷۵,۰۰۰ تومان</span>
-                    <a href="https://t.me/YOUR_TELEGRAM_ID" class="buy-btn">خرید و دریافت فایل</a>
-                </div>
-            </div>
-             <!-- محصول ۴ -->
-             <div class="product-card">
-                <div class="product-image">📈</div>
-                <div class="product-info">
-                    <h3 class="product-title">جزوه بازارهای مالی</h3>
-                    <p class="product-desc">راهنمای کامل ورود به بازار کریپتو و فارکس همراه با استراتژی‌های معاملاتی.</p>
-                    <span class="price-tag">۱۹۹,۰۰۰ تومان</span>
-                    <a href="https://t.me/YOUR_TELEGRAM_ID" class="buy-btn">خرید و دریافت فایل</a>
-                </div>
+    <!-- Content Viewer Modal -->
+    <div class="content-viewer" id="contentViewer">
+        <div class="content-wrapper">
+            <button class="close-btn" onclick="closeContent()"><i class="fas fa-times"></i></button>
+            <div id="contentBody">
+                <!-- محتوای مارک‌داون اینجا رندر می‌شود -->
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>تمامی حقوق محفوظ است © ۱۴۰۳</p>
-        <p>برای پشتیبانی به تلگرام ما مراجعه کنید</p>
-    </footer>
+    <script>
+        // دیتابیس محصولات (شما می‌توانید جلسات جدید را اینجا اضافه کنید)
+        const products = [
+            {
+                id: 1,
+                title: "جلسه ۱ | فیزیولوژی سلول و عضله",
+                badge: "Basic Sciences Physiology",
+                desc: "بررسی ساختار غشا، اندامک‌ها، سارکومر، مکانیسم انقباض و چرخه پل عرضی با نکات طلایی امتحانی.",
+                content: `
+<div class="mc-header-reverse">
+  <div class="mc-course">Basic Sciences Physiology — Session 1</div>
+  <div class="mc-brand">MedCardy</div>
+</div>
 
+<h1>جلسه ۱ | فیزیولوژی سلول و عضله</h1>
+
+<div class="callout" data-type="mc-goal">
+  <div class="callout-title"><i class="fas fa-bullseye"></i> هدف جلسه</div>
+  <div class="callout-content">
+    درک عمیق ساختار غشای سلول، اندامک‌های درون‌سلولی، معماری سلول عضلانی (از سارکومر تا پروتئین‌های کمکی)، مکانیسم جفت‌شدن تحریک-انقباض، چرخه پل عرضی، رابطه طول-نیرو، و روش‌های افزایش نیروی انقباض. همهٔ مفاهیم به‌صورت خط‌به‌خط و با تأکید بر نکات امتحانی پوشش داده شده‌اند.
+  </div>
+</div>
+
+<hr>
+
+<h2>۱. غشای سلول (Cell Membrane) – مرز هوشمند</h2>
+
+<h3>ساختار پایه</h3>
+<ul>
+    <li>غشا از <strong>لایه دوگانه فسفولیپیدی (Phospholipid Bilayer)</strong> ساخته شده است.</li>
+    <li>هر مولکول فسفولیپید دارای <strong>سر آب‌دوست (Hydrophilic Head)</strong> و <strong>دم آب‌گریز (Hydrophobic Tail)</strong> است.</li>
+    <li>دم‌ها به‌سوی داخل و سرها به‌سوی بیرون قرار می‌گیرند ← این ساختار مانع عبور آزاد مواد محلول در آب می‌شود.</li>
+    <li><strong>کلسترول (Cholesterol)</strong> موجود در غشا باعث <strong>سیالیت و انعطاف‌پذیری (Fluidity & Flexibility)</strong> می‌شود.</li>
+</ul>
+
+<div class="callout" data-type="mc-exam">
+  <div class="callout-title"><i class="fas fa-star"></i> نکته طلایی ⭐</div>
+  <div class="callout-content">
+    <strong>مدل موزاییک سیال (Fluid Mosaic Model):</strong> غشا یک ساختار پویا و روان است، نه یک دیوار سفت.
+  </div>
+</div>
+
+<h3>پروتئین‌های غشا (Membrane Proteins)</h3>
+
+<div class="mc-table-wrap">
+<table class="mc-table">
+    <thead>
+        <tr>
+            <th>نوع پروتئین</th>
+            <th>ویژگی</th>
+            <th>وظایف اصلی</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>پروتئین‌های سرتاسری (Integral)</strong></td>
+            <td>کل ضخامت غشا را طی می‌کنند</td>
+            <td>① انتقال مواد (کانال، حامل، پمپ) <br> ② <strong>گیرنده (Receptor)</strong> برای پیام‌های شیمیایی</td>
+        </tr>
+        <tr>
+            <td><strong>پروتئین‌های محیطی (Peripheral)</strong></td>
+            <td>فقط به سطح داخلی متصل‌اند</td>
+            <td>نقش <strong>آنزیمی (Enzymatic)</strong> – مدیریت واکنش‌های درون سلول</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<p><strong>نکته:</strong> گیرنده‌ها بدون ورود به سلول، پیام را به داخل منتقل می‌کنند <strong>(Signal Transduction)</strong>.</p>
+
+<h2>۲. اندامک‌های درون‌سلولی (Organelles)</h2>
+
+<h3>لیزوزوم (Lysosome) – دستگاه گوارش سلول</h3>
+<ul>
+    <li><strong>منشأ:</strong> دستگاه گلژی (Golgi Apparatus)</li>
+    <li><strong>محتوی:</strong> آنزیم‌های هیدرولیزکننده (Hydrolytic Enzymes)</li>
+    <li><strong>وظیفه:</strong> هضم و تجزیهٔ مواد درون‌سلولی</li>
+</ul>
+
+<h3>پراکسیزوم (Peroxisome) – کارخانهٔ سم‌زدایی</h3>
+<ul>
+    <li><strong>منشأ:</strong> شبکهٔ آندوپلاسمی صاف (Smooth ER)</li>
+    <li><strong>محتوی:</strong> آنزیم <strong>پراکسیداز (Peroxidase)</strong></li>
+    <li><strong>وظیفه:</strong> خنثی‌سازی سموم (Detoxification)</li>
+    <li><strong>قابلیت ویژه:</strong> تکثیر با جوانه‌زدن (Budding)</li>
+</ul>
+
+<div class="callout" data-type="mc-exam">
+  <div class="callout-title"><i class="fas fa-check"></i> تفاوت کلیدی</div>
+  <div class="callout-content">
+    لیزوزوم = گوارش، پراکسیزوم = سم‌زدایی
+  </div>
+</div>
+
+<h2>۳. سلول عضلانی (Muscle Cell) – ماشین تولید نیرو</h2>
+
+<h3>تغییر نام‌ها در سلول عضلانی</h3>
+
+<div class="mc-table-wrap">
+<table class="mc-table">
+    <thead>
+        <tr>
+            <th>سلول معمولی</th>
+            <th>سلول عضلانی</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>غشا (Membrane)</td>
+            <td><strong>سارکولم (Sarcolemma)</strong></td>
+        </tr>
+        <tr>
+            <td>شبکهٔ آندوپلاسمی (ER)</td>
+            <td><strong>شبکهٔ سارکوپلاسمی (Sarcoplasmic Reticulum – SR)</strong></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<h2>۴. سارکومر (Sarcomere) – واحد انقباضی عضله</h2>
+
+<p>بین دو <strong>خط Z (Z-line)</strong> قرار دارد.</p>
+
+<h3>اجزای نوری:</h3>
+
+<div class="mc-table-wrap">
+<table class="mc-table">
+    <thead>
+        <tr>
+            <th>ناحیه</th>
+            <th>محتوا</th>
+            <th>تغییر در انقباض</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>نوار I (I-band)</strong></td>
+            <td>فقط رشتهٔ نازک (آکتین) – روشن</td>
+            <td><strong>کوتاه می‌شود</strong> (ممکن است محو شود)</td>
+        </tr>
+        <tr>
+            <td><strong>نوار A (A-band)</strong></td>
+            <td>رشتهٔ ضخیم (میوزین) – تیره</td>
+            <td><strong>ثابت می‌ماند</strong> ⭐</td>
+        </tr>
+        <tr>
+            <td><strong>منطقه H (H-zone)</strong></td>
+            <td>فقط میوزین (در مرکز)</td>
+            <td>کوتاه می‌شود</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div class="callout" data-type="mc-exam">
+  <div class="callout-title"><i class="fas fa-repeat"></i> نکته طلایی 🔁</div>
+  <div class="callout-content">
+    <strong>در حین انقباض:</strong>
+    <ul>
+        <li>خطوط Z به هم نزدیک می‌شوند</li>
+        <li><strong>نوار I کوتاه می‌شود</strong></li>
+        <li><strong>نوار A هرگز تغییر طول نمی‌دهد</strong> (چون طول میوزین ثابت است)</li>
+    </ul>
+    <p><strong>تشبیه:</strong> انگشتان در هم قفل شده – طول انگشتان ثابت، فقط هم‌پوشانی بیشتر می‌شود.</p>
+  </div>
+</div>
+
+<h2>۵. چرخهٔ پل عرضی (Cross-Bridge Cycle) – مکانیسم انقباض</h2>
+
+<h3>مراحل چرخه:</h3>
+<ol>
+    <li><strong>ATP</strong> به سر میوزین متصل می‌شود</li>
+    <li><strong>ATPase</strong> میوزین، ATP را به <strong>ADP + Pi</strong> تجزیه می‌کند (انرژی ذخیره می‌شود)</li>
+    <li>سر میوزین <strong>کشیده می‌شود (Cocked)</strong> و آمادهٔ اتصال می‌شود</li>
+    <li>در حضور کلسیم، <strong>تروپونین</strong> تغییر شکل می‌دهد و <strong>تروپومیوزین</strong> را کنار می‌کشد</li>
+    <li>جایگاه اتصال روی <strong>آکتین</strong> نمایان می‌شود</li>
+    <li>سر میوزین به آکتین متصل می‌شود (<strong>پل عرضی – Cross-Bridge</strong>)</li>
+    <li>سر میوزین خم می‌شود و <strong>آکتین را به‌سوی مرکز سارکومر می‌کشد (Power Stroke)</strong></li>
+    <li>برای <strong>جدا شدن</strong> سر میوزین از آکتین، <strong>یک مولکول ATP جدید</strong> باید متصل شود</li>
+</ol>
+
+<div class="callout" data-type="mc-exam">
+  <div class="callout-title"><i class="fas fa-star"></i> نکته طلایی ⭐</div>
+  <div class="callout-content">
+    <ul>
+        <li><strong>انقباض = نیاز به ATP</strong> (برای کشیدن سر میوزین)</li>
+        <li><strong>شل شدن = نیاز به ATP</strong> (برای جدا کردن پل عرضی)</li>
+        <li>🔄 <strong>جمود نعشی (Rigor Mortis):</strong> پس از مرگ، ATP تمام می‌شود و پل‌های عرضی جدا نمی‌شوند ← عضلات سفت می‌شوند.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>۶. افزایش نیروی انقباض (Summation)</h2>
+
+<h3>۱. جمع مکانی (Multiple Fiber Summation)</h3>
+<ul>
+    <li>فعال‌سازی <strong>واحدهای حرکتی بیشتر (Motor Units)</strong></li>
+    <li>به جای ۱۰۰ فیبر، ۱۰۰۰ فیبر منقبض می‌شوند</li>
+</ul>
+
+<h3>۲. جمع فرکانس (Frequency Summation)</h3>
+<ul>
+    <li>تحریک‌های پشت سر هم با <strong>فرکانس بالا</strong></li>
+    <li>کلسیم بین تحریک‌ها کاملاً پمپ نمی‌شود ← کلسیم باقی می‌ماند</li>
+    <li>انقباض‌ها روی هم سوار می‌شوند تا به <strong>کزازی (Tetanus)</strong> برسند</li>
+</ul>
+
+<h3>۳. پدیدهٔ پله‌ای (Treppe – Staircase Effect)</h3>
+<ul>
+    <li>تحریک با <strong>فرکانس پایین‌تر</strong> (نه خیلی سریع)</li>
+    <li>هر انقباض از قبلی <strong>قوی‌تر</strong> می‌شود</li>
+    <li>دلیل: <strong>تجمع تدریجی کلسیم</strong> در سیتوزول به دلیل کندی پمپ‌ها</li>
+</ul>
+
+<div class="callout" data-type="mc-memory">
+  <div class="callout-title"><i class="fas fa-brain"></i> نکته نهایی ⭐</div>
+  <div class="callout-content">
+    بدن انسان یک شاهکار مهندسی است که با هماهنگی پروتئین‌ها، یون‌ها و انرژی، هر حرکت ارادی و غیرارادی را ممکن می‌سازد.
+  </div>
+</div>
+                `
+            },
+            // جلسه بعدی را اینجا اضافه کنید
+            /*
+            {
+                id: 2,
+                title: "جلسه ۲ | عنوان جلسه",
+                badge: "Course Name",
+                desc: "توضیح کوتاه درباره جلسه...",
+                content: "<h1>محتوای جلسه دوم...</h1>"
+            }
+            */
+        ];
+
+        // رندر کردن محصولات
+        const grid = document.getElementById('productsGrid');
+        
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.onclick = () => openContent(product.content);
+            
+            card.innerHTML = `
+                <span class="product-badge">${product.badge}</span>
+                <h3 class="product-title">${product.title}</h3>
+                <p class="product-desc">${product.desc}</p>
+                <div class="view-btn">
+                    مشاهده محتوا <i class="fas fa-arrow-left"></i>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+
+        // توابع باز و بسته کردن مودال
+        function openContent(html) {
+            document.getElementById('contentBody').innerHTML = html;
+            document.getElementById('contentViewer').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // جلوگیری از اسکرول صفحه اصلی
+        }
+
+        function closeContent() {
+            document.getElementById('contentViewer').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // بستن با کلیک بیرون کادر
+        document.getElementById('contentViewer').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeContent();
+            }
+        });
+    </script>
 </body>
 </html>
