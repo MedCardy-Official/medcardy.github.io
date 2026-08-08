@@ -80,6 +80,10 @@ const translations = {
       filterAllLevels: "All levels",
       filterAllUniversities: "All universities",
       showing: "Showing {count} courses",
+      statPages: "{count} pages",
+      statSessions: "{count} sessions",
+      statHours: "~{count} hours of audio",
+      notesLink: "Written notes (PDF)",
       categories: {
         basic: "Basic Sciences",
         basicExam: "Basic Sciences Exam",
@@ -144,7 +148,10 @@ const translations = {
       searchPlaceholder: "Search links",
       kindTelegram: "Telegram",
       kindPlatform: "Platform",
-      channelText: "The main channel — every episode, in order, as soon as it's ready.",
+      channelText: "Every course episode, in order, as soon as it's ready.",
+      mainChannelText: "The main channel — announcements, updates, and the full MedCardy project.",
+      buildTitle: "Build your own notes",
+      buildText: "Any term, any course, any university — request a custom audio podcast of your own material.",
       siteText: "Question packs, exam review, and flashcards alongside the podcast.",
       openLink: "Open link",
       empty: "No links match this search.",
@@ -241,6 +248,10 @@ const translations = {
       filterAllLevels: "همه‌ی مقاطع",
       filterAllUniversities: "همه‌ی دانشگاه‌ها",
       showing: "نمایش {count} دوره",
+      statPages: "{count} صفحه",
+      statSessions: "{count} جلسه",
+      statHours: "حدود {count} ساعت آموزش",
+      notesLink: "جزوه اختصاصی (PDF)",
       categories: {
         basic: "علوم پایه",
         basicExam: "آزمون علوم پایه",
@@ -305,7 +316,10 @@ const translations = {
       searchPlaceholder: "جستجوی لینک‌ها",
       kindTelegram: "تلگرام",
       kindPlatform: "پلتفرم",
-      channelText: "کانال اصلی — هر اپیزود، به‌ترتیب، همون لحظه که آماده می‌شه.",
+      channelText: "هر اپیزود دوره‌ها، به‌ترتیب، همون لحظه که آماده می‌شه.",
+      mainChannelText: "کانال اصلی — اطلاعیه‌ها، به‌روزرسانی‌ها و کل پروژه‌ی مدکاردی.",
+      buildTitle: "جزوه‌ی خودتو بساز",
+      buildText: "هر ترم، هر درس، هر دانشگاهی — درخواست بده تا پادکست اختصاصی از جزوه‌ی خودت ساخته بشه.",
       siteText: "بسته‌ی سوال، مرور امتحانی و فلش‌کارت، کنار پادکست.",
       openLink: "باز کردن لینک",
       empty: "لینکی مطابق این جستجو پیدا نشد.",
@@ -407,6 +421,9 @@ function applyLanguage(language) {
 
   saveLanguage(language);
   updateLinks();
+  renderCategoryFilters();
+  renderUniversityFilters();
+  renderArchive();
 }
 
 function updateLinks() {
@@ -456,6 +473,148 @@ languageButtons.forEach((button) => {
 
 if (repoSearch) {
   repoSearch.addEventListener("input", updateLinks);
+}
+
+/* ===========================================================
+   Course archive — categories, universities, and the course list.
+   Edit this array to add, remove, or update courses. See README.md
+   for the exact fields and how to add a cover photo.
+   =========================================================== */
+const CATEGORIES = ["basic", "basicExam", "physiopath", "externship"];
+const UNIVERSITIES = ["alborz", "iran", "beheshti", "tehran", "medcardy"];
+
+const COURSES = [
+  { category: "basic", universities: ["beheshti"], label: "آناتومی اندام - بهشتی", link: "https://t.me/medcardy_podcast/220" },
+  { category: "basic", universities: ["iran"], label: "فیزیولوژی گردش خون - ایران", link: "https://t.me/medcardy_podcast/548" },
+  { category: "basic", universities: ["alborz"], label: "فیزیولوژی گردش خون - البرز", link: "https://t.me/medcardy_podcast/483" },
+  { category: "basic", universities: ["alborz"], label: "فیزیولوژی غدد و تولیدمثل - البرز", link: "https://t.me/medcardy_podcast/360" },
+  { category: "basic", universities: ["iran"], label: "جنین‌شناسی - ایران", link: "https://t.me/medcardy_podcast/521" },
+  { category: "basic", universities: ["alborz"], label: "انگل‌شناسی - البرز", link: "https://t.me/medcardy_podcast/670" },
+  { category: "basic", universities: ["alborz"], label: "ایمنی‌شناسی - البرز", link: "https://t.me/medcardy_podcast/321" },
+  { category: "basic", universities: ["iran"], label: "اپیدمیولوژی - ایران", link: "https://t.me/medcardy_podcast/429" },
+  { category: "basic", universities: ["alborz"], label: "ژنتیک پزشکی - البرز", link: "https://t.me/medcardy_podcast/284" },
+  { category: "basic", universities: ["alborz"], label: "فارماکولوژی - البرز", link: "https://t.me/medcardy_podcast/361" },
+  { category: "basic", universities: ["alborz"], label: "روانشناسی - البرز", link: "https://t.me/medcardy_podcast/366" },
+
+  { category: "basicExam", universities: ["medcardy"], label: "فیزیولوژی - مدکاردی", link: "https://t.me/medcardy_podcast/643" },
+
+  { category: "physiopath", universities: ["tehran"], label: "کورس ریه - تهران", link: "https://t.me/medcardy_podcast/364" },
+  { category: "physiopath", universities: ["alborz"], label: "کورس ریه - البرز", link: "https://t.me/medcardy_podcast/368" },
+  { category: "physiopath", universities: ["tehran"], label: "کورس قلب - تهران", link: "https://t.me/medcardy_podcast/150" },
+  { category: "physiopath", universities: ["alborz"], label: "کورس اعصاب - البرز", link: "https://t.me/medcardy_podcast/484" },
+  { category: "physiopath", universities: ["medcardy"], label: "کورس اعصاب - مدکاردی", link: "https://t.me/medcardy_podcast/486" },
+  { category: "physiopath", universities: ["medcardy"], label: "کورس اطفال - مدکاردی", link: "https://t.me/medcardy_podcast/495" },
+  { category: "physiopath", universities: ["medcardy", "alborz"], label: "کورس جراحی - مدکاردی/البرز", link: "https://t.me/medcardy_podcast/668" },
+  {
+    category: "physiopath",
+    universities: ["medcardy", "alborz"],
+    label: "کورس کلیه - مدکاردی/البرز",
+    link: "https://t.me/medcardy_podcast/714",
+    cover: "assets/courses/kidney-alborz.jpg",
+    stats: { pages: 443, sessions: 44, hours: 15 },
+    notesLink: "https://t.me/medcardy_podcast/715",
+  },
+  { category: "physiopath", universities: ["alborz"], label: "کورس هماتولوژی - البرز", link: "https://t.me/medcardy_podcast/574" },
+
+  { category: "externship", universities: ["alborz"], label: "بیماری‌های عفونی - البرز", link: "https://t.me/medcardy_podcast/149" },
+  { category: "externship", universities: ["alborz"], label: "ژنتیک بالینی - البرز", link: "https://t.me/medcardy_podcast/522" },
+];
+
+let activeCategory = "all";
+let activeUniversity = "all";
+
+function renderFilterButtons(containerId, values, activeValue, allLabelKey, labelPrefix, onSelect) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const allButton = { value: "all", label: t(allLabelKey) };
+  const buttons = [allButton, ...values.map((value) => ({ value, label: t(`${labelPrefix}.${value}`) }))];
+
+  container.innerHTML = buttons
+    .map(({ value, label }) => {
+      const isActive = value === activeValue;
+      return `<button class="filter-button${isActive ? " active" : ""}" type="button" data-value="${value}" aria-pressed="${isActive}">${label}</button>`;
+    })
+    .join("");
+
+  container.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => onSelect(button.dataset.value));
+  });
+}
+
+function renderCategoryFilters() {
+  renderFilterButtons("categoryFilters", CATEGORIES, activeCategory, "archive.filterAllLevels", "archive.categories", (value) => {
+    activeCategory = value;
+    renderCategoryFilters();
+    renderArchive();
+  });
+}
+
+function renderUniversityFilters() {
+  renderFilterButtons("universityFilters", UNIVERSITIES, activeUniversity, "archive.filterAllUniversities", "archive.universities", (value) => {
+    activeUniversity = value;
+    renderUniversityFilters();
+    renderArchive();
+  });
+}
+
+function courseCard(course) {
+  const coverStyle = course.cover ? ` style="background-image:url('${course.cover}')"` : "";
+  const coverInner = course.cover ? "" : `<span>${t("archive.cover")}</span>`;
+  const universityChips = course.universities
+    .map((uni) => `<span class="archive-uni">${t(`archive.universities.${uni}`)}</span>`)
+    .join("");
+
+  const stats = course.stats
+    ? `<ul class="archive-stats">
+        <li>${applyTemplate(t("archive.statPages"), { count: formatNumber(course.stats.pages) })}</li>
+        <li>${applyTemplate(t("archive.statSessions"), { count: formatNumber(course.stats.sessions) })}</li>
+        <li>${applyTemplate(t("archive.statHours"), { count: formatNumber(course.stats.hours) })}</li>
+      </ul>`
+    : "";
+
+  const notesLink = course.notesLink
+    ? `<a class="archive-notes" href="${course.notesLink}" target="_blank" rel="noopener">${t("archive.notesLink")}</a>`
+    : "";
+
+  return `
+    <article class="archive-card">
+      <div class="archive-cover"${coverStyle}>
+        ${coverInner}
+        <span class="archive-category-badge">${t(`archive.categories.${course.category}`)}</span>
+      </div>
+      <div class="archive-body">
+        <h3>${course.label}</h3>
+        <div class="archive-unis">${universityChips}</div>
+        ${stats}
+        <div class="archive-links">
+          <a href="${course.link}" target="_blank" rel="noopener">${t("archive.listen")}</a>
+          ${notesLink}
+        </div>
+      </div>
+    </article>`;
+}
+
+function renderArchive() {
+  const grid = document.getElementById("archiveGrid");
+  const countEl = document.getElementById("archiveCount");
+  const emptyEl = document.getElementById("archiveEmpty");
+  if (!grid) return;
+
+  const items = COURSES.filter(
+    (course) =>
+      (activeCategory === "all" || course.category === activeCategory) &&
+      (activeUniversity === "all" || course.universities.includes(activeUniversity)),
+  );
+
+  grid.innerHTML = items.map(courseCard).join("");
+
+  if (countEl) {
+    countEl.textContent = applyTemplate(t("archive.showing"), { count: formatNumber(items.length) });
+  }
+  if (emptyEl) {
+    emptyEl.hidden = items.length > 0;
+  }
 }
 
 applyLanguage(activeLanguage);
