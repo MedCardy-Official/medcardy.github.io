@@ -792,6 +792,131 @@ html[dir="rtl"] .video-card span {
   font-size: 0.9rem;
 }
 
+/* ---------- Course archive ---------- */
+.archive-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.filters-secondary {
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+
+.archive-count {
+  margin: 0 0 20px;
+}
+
+.archive-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.archive-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-cover {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  background:
+    radial-gradient(circle at 80% 15%, rgba(19, 182, 215, 0.35), transparent 55%),
+    linear-gradient(155deg, var(--navy-950), var(--navy-900) 65%, #041028);
+  background-size: cover;
+  background-position: center;
+}
+
+.archive-cover span {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.archive-category-badge {
+  position: absolute;
+  top: 12px;
+  inset-inline-start: 12px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: rgba(8, 20, 46, 0.55);
+  border: 1px solid rgba(142, 240, 255, 0.35);
+  color: #8ef0ff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  backdrop-filter: blur(6px);
+}
+
+.archive-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.archive-body h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--navy-950);
+}
+
+.archive-unis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.archive-uni {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--blue-50);
+  border: 1px solid var(--blue-100);
+  color: var(--blue-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.archive-stats {
+  margin: 0;
+  padding: 10px 0 0;
+  border-top: 1px dashed var(--line);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.archive-stats li {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.archive-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 2px;
+}
+
+.archive-links a,
+.archive-notes {
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   display: flex;
