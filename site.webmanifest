@@ -1,0 +1,15 @@
+{
+  "name": "MedCardy Podcast",
+  "short_name": "MedCardy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f8fc",
+  "theme_color": "#0a2d63",
+  "icons": [
+    {
+      "src": "assets/medcardy-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

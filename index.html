@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MedCardy Podcast: audio summaries of medical textbooks and course sessions, published on Telegram.">
+    <meta name="theme-color" content="#0a2d63">
+    <meta property="og:title" content="MedCardy Podcast">
+    <meta property="og:description" content="A public home for MedCardy's audio podcast of medical books and course sessions.">
+    <meta property="og:image" content="assets/medcardy-logo.svg">
+    <title>MedCardy Podcast</title>
+    <link rel="icon" href="assets/medcardy-logo.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#episodes" data-i18n="skip">Skip to content</a>
+    <header class="site-header" aria-label="Site header" data-i18n-aria-label="labels.siteHeader">
+      <a class="brand" href="#top" aria-label="MedCardy Podcast home" data-i18n-aria-label="labels.home">
+        <img src="assets/medcardy-logo.svg" alt="" width="40" height="40">
+        <span>MedCardy</span>
+      </a>
+      <div class="header-actions">
+        <nav aria-label="Main links" data-i18n-aria-label="labels.mainLinks">
+          <a href="#episodes" data-i18n="nav.episodes">Episodes</a>
+          <a href="#courses" data-i18n="nav.courses">Courses</a>
+          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+          <a href="#team" data-i18n="nav.team">Team</a>
+          <a href="#highlights" data-i18n="nav.highlights">Highlights</a>
+          <a href="#links" data-i18n="nav.links">Links</a>
+          <a href="https://t.me/medcardy_podcast" data-i18n="nav.telegram">Telegram</a>
+        </nav>
+        <div class="language-switch" aria-label="Language" data-i18n-aria-label="labels.language">
+          <button class="language-button active" type="button" data-language-button="en" aria-pressed="true">EN</button>
+          <button class="language-button" type="button" data-language-button="fa" aria-pressed="false">FA</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Audio podcast for medical students</p>
+          <h1 id="hero-title">MedCardy</h1>
+          <p class="hero-copy" data-i18n="hero.copy">
+            A public home for MedCardy's audio podcast — session-by-session and chapter-by-chapter summaries of medical textbooks and course material, built by the MedCardy team.
+          </p>
+          <div class="hero-actions" aria-label="Primary links" data-i18n-aria-label="labels.primaryLinks">
+            <a class="button primary" href="https://t.me/medcardy_podcast" data-i18n="hero.telegram">Join Telegram</a>
+            <a class="button secondary" href="https://medcardy.com" data-i18n="hero.platform">Open MedCardy platform</a>
+          </div>
+          <dl class="signals" aria-label="Podcast signals" data-i18n-aria-label="labels.podcastSignals">
+            <div>
+              <dt data-i18n="hero.signalListenTitle">Listen</dt>
+              <dd data-i18n="hero.signalListenText">Session and chapter summaries</dd>
+            </div>
+            <div>
+              <dt data-i18n="hero.signalLearnTitle">Learn</dt>
+              <dd data-i18n="hero.signalLearnText">Exam-focused notes</dd>
+            </div>
+            <div>
+              <dt data-i18n="hero.signalReviewTitle">Review</dt>
+              <dd data-i18n="hero.signalReviewText">Quick pre-exam recaps</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="status-strip" aria-label="Site status" data-i18n-aria-label="labels.siteStatus">
+        <div>
+          <strong data-i18n="status.title">12 episodes published</strong>
+          <span data-i18n="status.text">Session recaps, book chapter summaries, and quick pre-exam reviews, all published on Telegram. New episodes go out every week.</span>
+        </div>
+        <a href="https://t.me/medcardy_podcast" data-i18n="status.link">Open channel</a>
+      </section>
+
+      <section class="material-section" id="episodes" aria-labelledby="episodes-title">
+        <div class="section-heading wide">
+          <div>
+            <p class="eyebrow" data-i18n="materials.eyebrow">Current material</p>
+            <h2 id="episodes-title" data-i18n="materials.title">Published and organized</h2>
+          </div>
+          <a class="text-link" href="https://t.me/medcardy_podcast" data-i18n="materials.allEpisodes">All episodes on Telegram</a>
+        </div>
+        <div class="material-grid" aria-label="Material counts" data-i18n-aria-label="labels.materialCounts">
+          <article class="metric-card">
+            <strong data-number-en="4" data-number-fa="۴">4</strong>
+            <h3 data-i18n="materials.coursesTitle">Courses covered</h3>
+            <p data-i18n="materials.coursesText">Lessons condensed into audio, session by session, with exam-relevant points highlighted.</p>
+            <a href="#courses" data-i18n="materials.coursesLink">Open courses</a>
+          </article>
+          <article class="metric-card">
+            <strong data-number-en="2" data-number-fa="۲">2</strong>
+            <h3 data-i18n="materials.booksTitle">Books covered</h3>
+            <p data-i18n="materials.booksText">Reference textbook chapters summarized for pre-exam review.</p>
+            <a href="#courses" data-i18n="materials.booksLink">Open courses</a>
+          </article>
+          <article class="metric-card">
+            <strong data-number-en="12" data-number-fa="۱۲">12</strong>
+            <h3 data-i18n="materials.episodesTitle">Episodes published</h3>
+            <p data-i18n="materials.episodesText">Audio episodes live on the Telegram channel today.</p>
+            <a href="https://t.me/medcardy_podcast" data-i18n="materials.episodesLink">Open channel</a>
+          </article>
+          <article class="metric-card">
+            <strong data-number-en="1" data-number-fa="۱">1</strong>
+            <h3 data-i18n="materials.platformTitle">Companion platform</h3>
+            <p data-i18n="materials.platformText">The MedCardy website hosts question packs and exam review alongside the podcast.</p>
+            <a href="https://medcardy.com" data-i18n="materials.platformLink">Open platform</a>
+          </article>
+        </div>
+        <p class="section-note placeholder-note" data-i18n="materials.placeholderNote">Sample numbers — update these four counts once real totals are ready.</p>
+      </section>
+
+      <section class="path-section" id="how" aria-labelledby="how-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="path.eyebrow">How it works</p>
+          <h2 id="how-title" data-i18n="path.title">From the page to your ears</h2>
+        </div>
+        <div class="path-grid">
+          <article>
+            <span class="step-mark" data-number-en="01" data-number-fa="۰۱">01</span>
+            <h3 data-i18n="path.oneTitle">Pick a book or course</h3>
+            <p data-i18n="path.oneText">Each term the team picks the textbooks and courses medical students rely on most.</p>
+          </article>
+          <article>
+            <span class="step-mark" data-number-en="02" data-number-fa="۰۲">02</span>
+            <h3 data-i18n="path.twoTitle">Record session by session</h3>
+            <p data-i18n="path.twoText">Each chapter or session becomes its own audio episode, focused on exam-relevant points.</p>
+          </article>
+          <article>
+            <span class="step-mark" data-number-en="03" data-number-fa="۰۳">03</span>
+            <h3 data-i18n="path.threeTitle">Publish on Telegram</h3>
+            <p data-i18n="path.threeText">Episodes go out in order on the Telegram channel, and stay linked here too.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-section" id="courses" aria-labelledby="courses-title">
+        <div class="section-heading wide">
+          <div>
+            <p class="eyebrow" data-i18n="projects.eyebrow">Courses and books</p>
+            <h2 id="courses-title" data-i18n="projects.title">Episode archive</h2>
+          </div>
+          <p class="section-note" data-i18n="projects.note">Each card is a book or a course. Episodes link straight to the matching Telegram post.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-topline">
+              <span data-i18n="projects.one.number">Course 1</span>
+              <strong data-i18n="projects.one.name">Lesson series</strong>
+            </div>
+            <p class="project-owner" data-i18n="projects.one.owner">Format: 3 sessions</p>
+            <h3 data-i18n="projects.one.title">Cell &amp; Muscle Physiology</h3>
+            <p data-i18n="projects.one.text">A session-by-session audio summary of basic physiology, from the cell membrane to the muscle contraction mechanism.</p>
+            <a href="https://t.me/medcardy_podcast/1" data-i18n="projects.openEpisodes">Open episodes</a>
+          </article>
+
+          <article class="project-card featured-project">
+            <div class="project-topline">
+              <span data-i18n="projects.two.number">Course 2</span>
+              <strong data-i18n="projects.two.name">Reference textbook</strong>
+            </div>
+            <p class="project-owner" data-i18n="projects.two.owner">Format: 2 chapters so far</p>
+            <h3 data-i18n="projects.two.title">Guyton — Medical Physiology</h3>
+            <p data-i18n="projects.two.text">A chapter-by-chapter audio summary of the Guyton reference textbook, built for pre-exam review.</p>
+            <div class="card-links">
+              <a href="https://t.me/medcardy_podcast/4" data-i18n="projects.openEpisodes">Open episodes</a>
+              <a href="https://medcardy.com" data-i18n="projects.websiteLink">Companion platform</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span data-i18n="projects.three.number">Course 3</span>
+              <strong data-i18n="projects.three.name">Lesson series</strong>
+            </div>
+            <p class="project-owner" data-i18n="projects.three.owner">Format: 2 sessions</p>
+            <h3 data-i18n="projects.three.title">Upper Limb Anatomy</h3>
+            <p data-i18n="projects.three.text">An audio review of the key points and common exam traps in upper-limb anatomy.</p>
+            <a href="https://t.me/medcardy_podcast/6" data-i18n="projects.openEpisodes">Open episodes</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span data-i18n="projects.four.number">Course 4</span>
+              <strong data-i18n="projects.four.name">Reference textbook</strong>
+            </div>
+            <p class="project-owner" data-i18n="projects.four.owner">Format: 1 chapter so far</p>
+            <h3 data-i18n="projects.four.title">Robbins — Basic Pathology</h3>
+            <p data-i18n="projects.four.text">Audio summaries of the most-tested Robbins chapters, focused on clinical pathology points.</p>
+            <a href="https://t.me/medcardy_podcast/8" data-i18n="projects.openEpisodes">Open episodes</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-heading wide">
+          <div>
+            <p class="eyebrow" data-i18n="gallery.eyebrow">Gallery</p>
+            <h2 id="gallery-title" data-i18n="gallery.title">Recording moments</h2>
+          </div>
+          <p class="section-note" data-i18n="gallery.note">Add real photos to assets/gallery and swap the placeholder tiles below.</p>
+        </div>
+        <div class="gallery-grid" aria-label="Gallery photos" data-i18n-aria-label="labels.galleryPhotos">
+          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo1">Recording session</figcaption></figure>
+          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo2">Course material</figcaption></figure>
+          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo3">Team at work</figcaption></figure>
+          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo4">Studio setup</figcaption></figure>
+          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo5">Episode planning</figcaption></figure>
+          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo6">Listener feedback</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="teachers-section" id="team" aria-labelledby="team-title">
+        <div class="section-heading wide">
+          <div>
+            <p class="eyebrow" data-i18n="teachers.eyebrow">Team</p>
+            <h2 id="team-title" data-i18n="teachers.title">Built by</h2>
+          </div>
+          <p class="section-note" data-i18n="teachers.note">The people building MedCardy's platform and podcast.</p>
+        </div>
+        <div class="teacher-grid">
+          <article class="teacher-card">
+            <div class="teacher-avatar" aria-hidden="true">MHK</div>
+            <div>
+              <h3 data-i18n="teachers.mohammad.name">Mohammad Hossein Kazemi</h3>
+              <ul>
+                <li data-i18n="teachers.mohammad.one">Co-founder, MedCardy</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="teacher-card">
+            <div class="teacher-avatar" aria-hidden="true">BZ</div>
+            <div>
+              <h3 data-i18n="teachers.benjamin.name">Benjamin Zolfaghari</h3>
+              <ul>
+                <li data-i18n="teachers.benjamin.one">Co-founder, MedCardy</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="videos-section" id="highlights" aria-labelledby="highlights-title">
+        <div class="section-heading wide">
+          <div>
+            <p class="eyebrow" data-i18n="videos.eyebrow">Episode highlights</p>
+            <h2 id="highlights-title" data-i18n="videos.title">Listen first</h2>
+          </div>
+          <p class="section-note" data-i18n="videos.note">A few episodes to start with, public on Telegram.</p>
+        </div>
+        <div class="video-grid">
+          <article class="video-card">
+            <span data-i18n="videos.one.kicker">Physiology, session 1</span>
+            <h3 data-i18n="videos.one.title">Cell membrane and organelles</h3>
+            <p data-i18n="videos.one.text">The opening session on membrane structure, glycocalyx function, and the lysosome-peroxisome distinction.</p>
+            <a href="https://t.me/medcardy_podcast/1" data-i18n="videos.listen">Listen on Telegram</a>
+          </article>
+          <article class="video-card">
+            <span data-i18n="videos.two.kicker">Physiology, session 2</span>
+            <h3 data-i18n="videos.two.title">Sarcomere and muscle contraction</h3>
+            <p data-i18n="videos.two.text">A walk through the cross-bridge cycle, excitation-contraction coupling, and the classic exam traps.</p>
+            <a href="https://t.me/medcardy_podcast/2" data-i18n="videos.listen">Listen on Telegram</a>
+          </article>
+          <article class="video-card">
+            <span data-i18n="videos.three.kicker">Guyton, chapter 1</span>
+            <h3 data-i18n="videos.three.title">Introduction and homeostasis</h3>
+            <p data-i18n="videos.three.text">The first chapter summary from the Guyton reference textbook series.</p>
+            <a href="https://t.me/medcardy_podcast/4" data-i18n="videos.listen">Listen on Telegram</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="repo-section" id="links" aria-labelledby="links-title">
+        <div class="section-heading wide">
+          <div>
+            <p class="eyebrow" data-i18n="repos.eyebrow">Links and resources</p>
+            <h2 id="links-title" data-i18n="repos.title">Everything in one place</h2>
+          </div>
+          <div class="filters" aria-label="Link filters" data-i18n-aria-label="labels.linkFilters">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true" data-i18n="repos.filterAll">All</button>
+            <button class="filter-button" type="button" data-filter="telegram" aria-pressed="false" data-i18n="repos.filterTelegram">Telegram</button>
+            <button class="filter-button" type="button" data-filter="platform" aria-pressed="false" data-i18n="repos.filterPlatform">Platform</button>
+          </div>
+        </div>
+
+        <div class="repo-tools">
+          <label class="sr-only" for="link-search" data-i18n="repos.searchLabel">Search links</label>
+          <input id="link-search" type="search" name="link-search" placeholder="Search links" autocomplete="off" dir="auto" data-i18n-placeholder="repos.searchPlaceholder">
+          <p class="repo-count" aria-live="polite">Showing all links</p>
+        </div>
+
+        <div class="repo-grid">
+          <article class="repo-card" data-kind="telegram">
+            <span class="repo-kind" data-i18n="repos.kindTelegram">Telegram</span>
+            <h3>MedCardy Podcast</h3>
+            <p data-i18n="repos.channelText">The main channel — every episode, in order, as soon as it's ready.</p>
+            <a href="https://t.me/medcardy_podcast" data-i18n="repos.openLink">Open link</a>
+          </article>
+          <article class="repo-card" data-kind="platform">
+            <span class="repo-kind" data-i18n="repos.kindPlatform">Platform</span>
+            <h3>medcardy.com</h3>
+            <p data-i18n="repos.siteText">Question packs, exam review, and flashcards alongside the podcast.</p>
+            <a href="https://medcardy.com" data-i18n="repos.openLink">Open link</a>
+          </article>
+        </div>
+        <p class="empty-state" hidden data-i18n="repos.empty">No links match this search.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footer.text">MedCardy — an audio podcast for medical books and course sessions.</p>
+      <a href="https://t.me/medcardy_podcast" data-i18n="footer.telegram">Telegram channel</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
