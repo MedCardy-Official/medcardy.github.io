@@ -1025,3 +1025,44 @@ html { scroll-padding-top: 125px; }
 }
 /* Readable section labels on the original light background. */
 main > section:not(.hero) .eyebrow { color: var(--blue-deep); }
+/* Stable course dimensions: filtering never stretches a remaining card. */
+.archive-grid {
+  grid-template-columns: repeat(auto-fill, 280px);
+  justify-content: start;
+  align-items: start;
+}
+.archive-card { width: 280px; height: 500px; }
+.archive-cover { aspect-ratio: auto; height: 190px; flex: 0 0 190px; }
+.archive-body { min-height: 0; }
+.archive-body h3 { min-height: 2.8em; line-height: 1.4; }
+.archive-section .section-heading { display: block; }
+.archive-section .section-note { max-width: 760px; margin-top: 16px; line-height: 1.9; }
+
+/* Brand and navigation follow the page language, including Persian RTL. */
+.site-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  direction: ltr;
+  padding-block: 16px;
+}
+html[dir="rtl"] .site-header { direction: rtl; text-align: right; }
+html[dir="ltr"] .site-header { text-align: left; }
+.site-header .brand { grid-column: 1; grid-row: 1; }
+.site-header .header-actions { grid-column: 2; grid-row: 1; display: flex; justify-content: flex-end; gap: 24px; }
+.site-header nav { gap: 24px; font-size: .92rem; }
+.site-header nav a { padding-block: 8px; }
+.site-header nav a:hover { color: var(--blue-deep); }
+@media (max-width: 900px) {
+  .site-header { gap: 12px 20px; }
+  .site-header .header-actions { display: contents; }
+  .site-header .language-switch { grid-column: 2; grid-row: 1; justify-self: end; margin: 0; }
+  .site-header nav { grid-column: 1 / -1; grid-row: 2; width: 100%; justify-content: start; flex-wrap: wrap; overflow: visible; gap: 8px 24px; white-space: normal; padding: 0; }
+}
+@media (max-width: 340px) {
+  .archive-grid { grid-template-columns: minmax(0, 280px); }
+  .archive-card { width: 100%; }
+}
+.archive-section { padding: clamp(48px, 7vw, 88px) clamp(18px, 4vw, 64px); min-width: 0; }
+.archive-section .section-heading h2 { overflow-wrap: anywhere; }

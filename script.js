@@ -358,14 +358,8 @@ translations.fa.repos.subscriptionTitle = "اشتراک مدکاردی یونی�
 translations.en.repos.subscriptionTitle = "MedCardy University subscription";
 translations.fa.repos.subscriptionText = "از اول ترم تا شب امتحان؛ اشتراک و سفارش گروهی ترمی.";
 translations.en.repos.subscriptionText = "From the start of term to exam night: term subscriptions and group orders.";
-const filterButtons = document.querySelectorAll(".filter-button");
-const repoCards = document.querySelectorAll(".repo-card");
-const repoCount = document.querySelector(".repo-section .repo-count");
-const repoSearch = document.querySelector("#link-search");
-const emptyState = document.querySelector(".repo-section .empty-state");
 const languageButtons = document.querySelectorAll("[data-language-button]");
 const numberElements = document.querySelectorAll("[data-number-en][data-number-fa]");
-let activeFilter = "all";
 let activeLanguage = getStoredLanguage();
 
 function getStoredLanguage() {
@@ -441,60 +435,15 @@ function applyLanguage(language) {
   });
 
   saveLanguage(language);
-  updateLinks();
   renderCategoryFilters();
   renderUniversityFilters();
   renderArchive();
 }
 
-function updateLinks() {
-  if (!repoSearch || !repoCount || !emptyState) return;
-
-  const searchText = repoSearch.value.trim().toLowerCase();
-  let visibleCount = 0;
-
-  repoCards.forEach((card) => {
-    const matchesFilter = activeFilter === "all" || card.dataset.kind === activeFilter;
-    const matchesSearch = card.textContent.toLowerCase().includes(searchText);
-    const shouldShow = matchesFilter && matchesSearch;
-    card.classList.toggle("hidden", !shouldShow);
-    if (shouldShow) visibleCount += 1;
-  });
-
-  filterButtons.forEach((button) => {
-    const isActive = button.dataset.filter === activeFilter;
-    button.classList.toggle("active", isActive);
-    button.setAttribute("aria-pressed", String(isActive));
-  });
-
-  if (activeFilter === "all") {
-    repoCount.textContent = applyTemplate(t("repos.showingAll"), { count: formatNumber(visibleCount) });
-  } else {
-    repoCount.textContent = applyTemplate(t("repos.showingFiltered"), {
-      count: formatNumber(visibleCount),
-      filter: t(`repos.labels.${activeFilter}`),
-    });
-  }
-
-  emptyState.hidden = visibleCount > 0;
-}
-
-function setFilter(filter) {
-  activeFilter = filter;
-  updateLinks();
-}
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => setFilter(button.dataset.filter));
-});
-
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => applyLanguage(button.dataset.languageButton));
 });
 
-if (repoSearch) {
-  repoSearch.addEventListener("input", updateLinks);
-}
 
 /* ===========================================================
    Course archive — categories, universities, and the course list.
