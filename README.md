@@ -5,7 +5,7 @@ A buildless bilingual Persian/English course directory for GitHub Pages. Persian
 Open `index.html` directly or run `python -m http.server 8080` for local preview. No dependencies or build step are required.
 
 - `index.html`: page content and translated text (`data-fa`, `data-en`).
-- `styles.css`: dark glass design, responsive layouts and reduced-motion support.
+- `styles.css`: light clinic palette and glass design, responsive layouts and reduced-motion support.
 - `script.js`: all 37 course collections, category/university filters, Persian-normalized search and translations.
 - `assets/medcardy-logo.svg`: scalable card-and-cross brand symbol, also used as the favicon. `assets/logo.svg` is the matching compatibility asset.
 - `assets/medcardy-brand.jpg`: supplied brand reference and social preview image.
@@ -24,3 +24,5 @@ python scripts/check_links.py
 ```
 
 GitHub Pages serves the root of this repository. Publishing requires pushing the changes to the configured branch.
+
+Theme palette: `#F6FBFF` background, `#D6ECFF` soft panels, `#8EC5FF` borders, `#3A7BD5` accents, and `#1D2D50` text and branding. Colors are defined at the top of `styles.css`.
