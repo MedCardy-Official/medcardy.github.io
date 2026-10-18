@@ -392,6 +392,10 @@ Object.assign(translations.en.termic, {universityFilter:"University", entryFilte
 
 translations.fa.termic.logoAlt = "نشان دانشگاه علوم پزشکی شهید بهشتی";
 translations.en.termic.logoAlt = "Shahid Beheshti University of Medical Sciences logo";
+
+Object.assign(translations.fa.termic, {panelTitle:"پنل این ورودی", examsTitle:"تاریخ امتحانات", madeCourses:"دوره‌های ساخته‌شده", examsEmpty:"برای ترم انتخاب‌شده هنوز برنامهٔ امتحانی ثبت نشده است.", examCount:"{count} امتحان", dateUnknown:"تاریخ اعلام نشده", semesterNote:"با انتخاب ترم، امتحانات و دوره‌های همان ترم نمایش داده می‌شوند. محتوای ترم‌های قبل در همین پنل باقی می‌ماند."});
+Object.assign(translations.en.termic, {panelTitle:"Your cohort panel", examsTitle:"Exam dates", madeCourses:"Courses we have created", examsEmpty:"No exam schedule has been added for the selected semester.", examCount:"{count} exams", dateUnknown:"Date not announced", semesterNote:"Choose a semester to view its exams and courses. Previous semesters remain available in this same panel."});
+
 const languageButtons = document.querySelectorAll("[data-language-button]");
 const numberElements = document.querySelectorAll("[data-number-en][data-number-fa]");
 let activeLanguage = getStoredLanguage();

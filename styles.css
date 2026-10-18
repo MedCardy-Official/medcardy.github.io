@@ -1206,3 +1206,18 @@ html[dir="rtl"] .summit-hero h1 { margin-inline-start: 0; margin-inline-end: 0; 
   .termic-university-identity .university-logo-frame { width: 128px; height: 128px; }
 }
 @media (max-width:380px) { .termic-cohort-copy { flex-basis: 100%; } }
+.cohort-university-logo { width: 104px; height: 104px; padding: 8px; }
+.termic-semester-note { color: var(--muted); line-height: 1.9; max-width: 850px; margin: 0 0 24px; }
+.termic-exams { margin-top: 36px; padding: 24px; background: rgba(255,255,255,.88); border: 1px solid var(--line); border-radius: 16px; }
+.termic-subheading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.termic-subheading h3, .termic-course-heading { margin: 0; color: var(--navy-950); font-size: 1.2rem; }
+.termic-subheading p { margin: 0; color: var(--muted); font-size: .82rem; }
+.termic-exam-empty { margin: 22px 0 0; color: var(--muted); font-size: .9rem; }
+.termic-exam-list { display: grid; gap: 12px; }
+.termic-exam { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px; margin-top: 12px; border-radius: 12px; background: var(--blue-50); border: 1px solid var(--line); }
+.termic-exam h4 { margin: 0 0 6px; font-size: 1rem; color: var(--navy-950); }
+.termic-exam span { font-size: .8rem; color: var(--muted); }
+.termic-exam-date { display: flex; flex-direction: column; gap: 6px; text-align: end; }
+.termic-exam-date strong { font-size: .9rem; color: var(--navy-900); }
+.termic-course-heading { margin-top: 40px; }
+@media(max-width:600px) { .termic-exams { padding: 20px; } .termic-exam { flex-direction: column; align-items: stretch; gap: 12px; } .termic-exam-date { text-align: start; } }

@@ -17,3 +17,5 @@ The home header links to `#termic`. The cohort card opens `termic-beheshti-1404.
 Confirmed dedicated courses go in `TERMIC_COHORT.courses` in `termic-data.js`. The list is intentionally empty until the cohort-specific course links are supplied. Each entry uses `category`, `universities`, `label`, `labelEn`, `link`, `source` (localized object or null), optional `cover` and `notesLink`, plus a positive integer `semester`. Semester/category filters are populated from the actual entries. The course list is not copied from the public archive.
 
 All page links use relative HTML paths and work on GitHub Pages without server routing.
+
+Cohort panels have two sections: exam dates and created courses. In `termic-data.js`, add confirmed exams to `exams` with `semester`, localized `label`/`labelEn`, an ISO Gregorian `date` (or null) and optional `time`. Add registered semester numbers to `semesters`. One semester filter controls both sections; older terms stay in the same cohort page. Selected semesters can be shared using `?semester=1`.
