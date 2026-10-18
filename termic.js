@@ -10,7 +10,7 @@
     try {const url=new URL(location.href);if(semester.value==='all')url.searchParams.delete('semester');else url.searchParams.set('semester',semester.value);history.replaceState(null,'',url);} catch {}
   }
   function render() {
-    const selected = semester.value || savedSemester || 'all';
+    const selected = semester.value || savedSemester || String(TERMIC_COHORT.defaultSemester || 'all');
     const semesters = [...new Set([...(TERMIC_COHORT.semesters || []), ...TERMIC_COHORT.courses.map(c => c.semester), ...(TERMIC_COHORT.exams || []).map(e => e.semester)])].sort((a,b) => a-b);
     semester.innerHTML = `<option value="all">${t('termic.allSemesters')}</option>` + semesters.map(n => `<option value="${n}">${applyTemplate(t('termic.semesterLabel'), {number: formatNumber(n)})}</option>`).join('');
     semester.value = semesters.map(String).includes(selected) ? selected : 'all';
@@ -30,11 +30,11 @@
       let dateLabel = t('termic.dateUnknown');
       if (exam.date && /^\d{4}-\d{2}-\d{2}$/.test(exam.date)) {
         const date = new Date(exam.date + 'T12:00:00Z');
-        if (!Number.isNaN(date.getTime())) dateLabel = new Intl.DateTimeFormat(activeLanguage==='fa'?'fa-IR':'en-GB', {year:'numeric',month:'long',day:'numeric',timeZone:'UTC'}).format(date);
+        if (!Number.isNaN(date.getTime())) dateLabel = new Intl.DateTimeFormat(activeLanguage==='fa'?'fa-IR':'en-GB', {weekday:'long',year:'numeric',month:'long',day:'numeric',timeZone:'UTC'}).format(date);
       }
       const examName = activeLanguage==='fa' ? exam.label : (exam.labelEn || exam.label);
       const termLabel = applyTemplate(t('termic.semesterLabel'), {number:formatNumber(exam.semester)});
-      return `<article class="termic-exam"><div><h4>${escape(examName)}</h4><span>${escape(termLabel)}</span></div><div class="termic-exam-date"><strong>${escape(dateLabel)}</strong>${exam.time?`<span dir="ltr">${escape(exam.time)}</span>`:''}</div></article>`;
+      return `<article class="termic-exam"><div><h4>${escape(examName)}</h4><span>${escape(termLabel)}</span></div><div class="termic-exam-date"><strong>${escape(dateLabel)}</strong>${exam.time?`<span dir="ltr">${escape(activeLanguage==='fa'?exam.time.replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]):exam.time)}</span>`:`<span>${activeLanguage==='fa'?'ساعت اعلام نشده':'Time not announced'}</span>`}</div></article>`;
     }).join('');
     document.querySelector('#termic-exam-empty').hidden = exams.length>0;
     document.querySelector('#termic-exam-count').textContent = applyTemplate(t('termic.examCount'), {count:formatNumber(exams.length)});
