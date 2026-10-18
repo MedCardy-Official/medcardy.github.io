@@ -8,6 +8,7 @@ required = [
     "termic-beheshti-1404.html",
     "termic-data.js",
     "termic.js",
+    "termic-directory.js",
     "styles.css",
     "script.js",
     "assets/medcardy-logo.svg",

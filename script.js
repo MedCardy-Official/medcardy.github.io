@@ -386,6 +386,10 @@ translations.en.termic = {
  allSemesters: "All semesters", semesterLabel: "Semester {number}", allCategories: "All levels", placeholder: "Search a course or source…", emptyTitle: "Content for this cohort is being prepared", emptyCopy: "No courses have been added for this cohort yet. Published collections will be available here.", noMatch: "No matching courses", noMatchCopy: "Try another search or change the filters.", count: "{count} courses"
 };
 
+
+Object.assign(translations.fa.termic, {universityFilter:"دانشگاه", entryFilter:"ورودی", allUniversities:"همهٔ دانشگاه‌ها", allEntries:"همهٔ ورودی‌ها", entryLabel:"ورودی {year}", directoryCount:"{count} صفحهٔ ترمیک", directoryEmpty:"صفحه‌ای با این دانشگاه و ورودی پیدا نشد."});
+Object.assign(translations.en.termic, {universityFilter:"University", entryFilter:"Entry year", allUniversities:"All universities", allEntries:"All entry years", entryLabel:"{year} entry cohort", directoryCount:"{count} cohort pages", directoryEmpty:"No pages match this university and entry year."});
+
 const languageButtons = document.querySelectorAll("[data-language-button]");
 const numberElements = document.querySelectorAll("[data-number-en][data-number-fa]");
 let activeLanguage = getStoredLanguage();

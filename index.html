@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="styles.css?v=termic-1">
+    <link rel="stylesheet" href="styles.css?v=termic-2">
   </head>
   <body>
     <a class="skip-link" href="#episodes" data-i18n="skip">Skip to content</a>
@@ -196,7 +196,10 @@
 
       <section class="termic-section" id="termic" aria-labelledby="termic-title">
         <div class="section-heading"><p class="eyebrow" data-i18n="termic.eyebrow">مخصوص دانشگاه و ورودی تو</p><h2 id="termic-title" data-i18n="termic.nav">مدکاردی ترمیک</h2><p class="section-note" data-i18n="termic.description">محتوای اختصاصی هر ترم، بر اساس جزوه‌های خودتان؛ دانشگاه و ورودی‌ات را انتخاب کن.</p></div>
-        <article class="termic-cohort"><div class="termic-symbol" aria-hidden="true">✚</div><div class="termic-cohort-copy"><span class="termic-caption" data-i18n="termic.cohort">ورودی ۱۴۰۴</span><h3 data-i18n="termic.university">دانشگاه علوم پزشکی شهید بهشتی</h3><p data-i18n="termic.cohortDescription">صفحهٔ اختصاصی درس‌ها، جزوه‌ها و پادکست‌های این ورودی.</p></div><a class="termic-open" href="termic-beheshti-1404.html" data-i18n="termic.open">ورود به صفحهٔ ترمیک ↗</a></article>
+        <div class="termic-tools termic-directory-tools"><div class="termic-inputs"><label><span data-i18n="termic.universityFilter">دانشگاه</span><select id="termic-university-filter"></select></label><label><span data-i18n="termic.entryFilter">ورودی</span><select id="termic-entry-filter"></select></label></div></div>
+        <div class="termic-result-row"><p id="termic-directory-count" role="status"></p><button class="filter-button" id="termic-directory-reset" type="button" hidden data-i18n="termic.clear">پاک کردن فیلترها</button></div>
+        <article class="termic-cohort" data-university="beheshti" data-entry="1404"><div class="termic-symbol" aria-hidden="true">✚</div><div class="termic-cohort-copy"><span class="termic-caption" data-i18n="termic.cohort">ورودی ۱۴۰۴</span><h3 data-i18n="termic.university">دانشگاه علوم پزشکی شهید بهشتی</h3><p data-i18n="termic.cohortDescription">صفحهٔ اختصاصی درس‌ها، جزوه‌ها و پادکست‌های این ورودی.</p></div><a class="termic-open" href="termic-beheshti-1404.html" data-i18n="termic.open">ورود به صفحهٔ ترمیک ↗</a></article>
+        <p class="termic-directory-empty" id="termic-directory-empty" hidden data-i18n="termic.directoryEmpty">صفحه‌ای با این دانشگاه و ورودی پیدا نشد.</p>
       </section>
     </main>
 
@@ -205,6 +208,7 @@
       <a href="https://t.me/medcardy_podcast" data-i18n="footer.telegram">Telegram channel</a>
     </footer>
 
-    <script src="script.js?v=termic-1"></script>
+    <script src="script.js?v=termic-2"></script>
+    <script src="termic-directory.js?v=termic-2"></script>
   </body>
 </html>
