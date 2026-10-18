@@ -1071,24 +1071,24 @@ html[dir="ltr"] .site-header { text-align: left; }
   padding-inline: max(24px, calc((100% - 1160px) / 2));
   padding-block: 12px;
   min-height: 72px;
-  background: rgba(12, 20, 37, .97);
-  color: #f6fbff;
-  border-bottom-color: rgba(214,236,255,.12);
+  background: rgba(245, 248, 252, .94);
+  color: var(--ink);
+  border-bottom-color: var(--line);
 }
-.site-header .brand span { background: none; -webkit-text-fill-color: #f6fbff; }
+.site-header .brand span { background: linear-gradient(135deg, var(--navy-900), var(--blue)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .site-header .brand img { background: #f6fbff; padding: 3px; border-radius: 8px; }
-.site-header nav { color: #becbdd; font-size: .83rem; gap: 22px; }
-.site-header nav a:hover { color: #fff; }
+.site-header nav { color: var(--muted); font-size: .83rem; gap: 22px; }
+.site-header nav a:hover { color: var(--blue); }
 .site-header .header-actions { gap: 20px; }
-.header-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 6px 16px; border: 1px solid rgba(142,197,255,.3); border-radius: 999px; background: #3a7bd5; color: #fff; text-decoration: none; font-size: .8rem; font-weight: 700; white-space: nowrap; }
-.site-header .language-switch { background: rgba(255,255,255,.04); border-color: rgba(214,236,255,.18); box-shadow: none; }
-.site-header .language-button { color: #bdcce0; font-size: .75rem; min-width: 34px; min-height: 34px; padding-inline: 10px; }
-.site-header .language-button.active { background: rgba(142,197,255,.16); color: #fff; }
+.header-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 6px 16px; border: 1px solid rgba(142,197,255,.3); border-radius: 999px; background: var(--blue); color: var(--white); text-decoration: none; font-size: .8rem; font-weight: 700; white-space: nowrap; }
+.site-header .language-switch { background: var(--white); border-color: var(--line); box-shadow: none; }
+.site-header .language-button { color: var(--muted); font-size: .75rem; min-width: 34px; min-height: 34px; padding-inline: 10px; }
+.site-header .language-button.active { background: linear-gradient(135deg, var(--navy-900), var(--blue)); color: var(--white); }
 .summit-hero {
   display: block;
   min-height: 680px;
   padding: 80px max(24px, calc((100% - 1160px) / 2)) 72px;
-  background: radial-gradient(ellipse at 45% 0%, rgba(58,123,213,.19), transparent 60%), radial-gradient(ellipse at 20% 62%, rgba(142,197,255,.1), transparent 35%), #0c1425;
+  background: radial-gradient(circle at 85% 15%, rgba(19,182,215,.25), transparent 45%), linear-gradient(120deg, var(--navy-950) 0%, var(--navy-900) 55%, var(--blue-deep) 100%);
   isolation: isolate;
 }
 .summit-hero::after { inset: 0; top: 0; width: auto; height: auto; border: 0; border-radius: 0; background-image: linear-gradient(rgba(214,236,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(214,236,255,.055) 1px,transparent 1px); background-size: 48px 48px; pointer-events: none; z-index: -1; }
@@ -1106,8 +1106,9 @@ html[dir="rtl"] .summit-hero h1 { margin-inline-start: 0; margin-inline-end: 0; 
 .summit-hero .signals dd { font-size: .73rem; margin-top: 6px; color: #aebfd5; }
 .summit-hero .hero-actions { margin-top: 28px; gap: 12px; }
 .summit-hero .button { min-height: 48px; font-size: .9rem; gap: 24px; }
-.summit-hero .button.primary { background: #3a7bd5; color: #fff; box-shadow: none; }
-.summit-hero .button.primary:hover, .header-cta:hover { background: #316bbd; }
+.summit-hero .button.primary { background: linear-gradient(135deg, #8ef0ff, var(--cyan)); color: var(--navy-950); box-shadow: 0 14px 30px rgba(19,182,215,.18); }
+.summit-hero .button.primary:hover { background: #8ef0ff; }
+.header-cta:hover { background: var(--blue-deep); }
 .summit-hero .button.secondary { background: rgba(255,255,255,.025); border-color: rgba(214,236,255,.28); }
 .hero-platform { display: inline-block; color: #aebfd5; font-size: .76rem; margin-top: 18px; text-decoration: none; }
 .hero-platform:hover { color: #f6fbff; }
