@@ -1,28 +1,9 @@
-# MedCardy
+# MedCardy Podcast
 
-A buildless bilingual Persian/English course directory for GitHub Pages. Persian is the default; the language choice is saved locally when storage is available.
+Static bilingual website for GitHub Pages. No build or server dependency is required.
 
-Open `index.html` directly or run `python -m http.server 8080` for local preview. No dependencies or build step are required.
+The original design is retained: blue gradient hero, light content sections, material metrics, learning steps, course archive, gallery, team, highlights and resource links. Refinements cover logo clarity, restrained glass surfaces, spacing and responsive layout.
 
-- `index.html`: page content and translated text (`data-fa`, `data-en`).
-- `styles.css`: light clinic palette and glass design, responsive layouts and reduced-motion support.
-- `script.js`: all 37 course collections, category/university filters, Persian-normalized search and translations.
-- `assets/medcardy-logo.svg`: scalable card-and-cross brand symbol, also used as the favicon. `assets/logo.svg` is the matching compatibility asset.
-- `assets/medcardy-brand.jpg`: supplied brand reference and social preview image.
-- `assets/apple-touch-icon.png`: home-screen icon.
+All 37 supplied course collections live in `COURSES` in `script.js`. The five categories and six university/source labels are filterable. Persian is the default; language choice is saved locally when possible. Translations are in `translations`.
 
-To add a course, append a row to `COURSES` in `script.js`: `[category, persianTitle, englishTitle, commaSeparatedSources, telegramPostId, featured]`. Sources must exist in `UNIVERSITIES`; category keys are defined in `CATEGORIES`. Counts are calculated automatically. Keep the four-university hero statistic in sync if another university is added. MedCardy and Houshmand are sources rather than universities.
-
-Existing nephrology audio statistics and PDF link are retained. All course destinations are Telegram posts; the page does not imply that audio playback happens on the website. The catalogue comes from the supplied quick-access list.
-
-Checks:
-
-```
-node --check script.js
-python scripts/check_site_files.py
-python scripts/check_links.py
-```
-
-GitHub Pages serves the root of this repository. Publishing requires pushing the changes to the configured branch.
-
-Theme palette: `#F6FBFF` background, `#D6ECFF` soft panels, `#8EC5FF` borders, `#3A7BD5` accents, and `#1D2D50` text and branding. Colors are defined at the top of `styles.css`.
+Run checks with `node --check script.js`, `python scripts/check_site_files.py` and `python scripts/check_links.py`. Preview with `python -m http.server 8080`. GitHub Actions publishes pushes to `main` using the existing workflow.
