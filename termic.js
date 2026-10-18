@@ -34,9 +34,11 @@
       }
       const examName = activeLanguage==='fa' ? exam.label : (exam.labelEn || exam.label);
       const termLabel = applyTemplate(t('termic.semesterLabel'), {number:formatNumber(exam.semester)});
-      return `<article class="termic-exam"><div><h4>${escape(examName)}</h4><span>${escape(termLabel)}</span></div><div class="termic-exam-date"><strong>${escape(dateLabel)}</strong>${exam.time?`<span dir="ltr">${escape(activeLanguage==='fa'?exam.time.replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]):exam.time)}</span>`:`<span>${activeLanguage==='fa'?'ساعت اعلام نشده':'Time not announced'}</span>`}</div></article>`;
+      const timeLabel = exam.time ? (activeLanguage==='fa'?exam.time.replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]):exam.time) : (activeLanguage==='fa'?'اعلام نشده':'Not announced');
+      return `<tr class="termic-exam"><th scope="row">${escape(examName)}</th><td>${escape(termLabel)}</td><td>${escape(dateLabel)}</td><td><span${exam.time?' dir="ltr"':''}>${escape(timeLabel)}</span></td></tr>`;
     }).join('');
     document.querySelector('#termic-exam-empty').hidden = exams.length>0;
+    document.querySelector('#termic-exam-table-wrap').hidden = exams.length===0;
     document.querySelector('#termic-exam-count').textContent = applyTemplate(t('termic.examCount'), {count:formatNumber(exams.length)});
     document.querySelector('#termic-count').textContent = applyTemplate(t('termic.count'), {count:formatNumber(matches.length)});
     document.querySelector('#termic-empty').hidden = matches.length>0;

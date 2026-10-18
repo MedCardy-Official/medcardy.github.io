@@ -1224,3 +1224,24 @@ html[dir="rtl"] .summit-hero h1 { margin-inline-start: 0; margin-inline-end: 0; 
 .course-status { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 700; }
 .course-status.is-processing { background: var(--blue-50); color: var(--navy-900); border-color: var(--blue-100); }
 .course-status.is-ready { background: var(--blue-100); color: var(--navy-950); border-color: #8ec5ff; }
+
+/* Compact, natively keyboard-accessible exam disclosure and real table. */
+.termic-exams { padding: 0; margin-top: 26px; overflow: hidden; }
+.termic-exams > summary { display: flex; align-items: center; gap: 14px; padding: 16px 20px; cursor: pointer; list-style: none; color: var(--navy-950); font-weight: 700; font-size: .95rem; }
+.termic-exams > summary::-webkit-details-marker { display: none; }
+#termic-exam-count { margin-inline-start: auto; color: var(--muted); font-size: .78rem; font-weight: 500; }
+.exam-toggle { font-size: 20px; line-height: 1; }
+.termic-exams[open] .exam-toggle { transform: rotate(180deg); }
+.termic-exams > summary:focus-visible, .exam-table-wrap:focus-visible { outline: 2px solid var(--blue); outline-offset: -3px; }
+.exam-table-wrap { overflow: auto; max-height: 380px; border-top: 1px solid var(--line); }
+.exam-table { width: 100%; border-collapse: collapse; font-size: .8rem; min-width: 590px; }
+.exam-table th, .exam-table td { padding: 10px 14px; text-align: start; border-bottom: 1px solid var(--line); line-height: 1.7; }
+.exam-table thead th { position: sticky; top: 0; background: var(--blue-50); color: var(--navy-900); z-index: 1; font-weight: 700; }
+.exam-table tbody th { font-weight: 600; color: var(--ink); width: 48%; }
+.exam-table td { color: var(--muted); white-space: nowrap; }
+.exam-table tr.termic-exam { display: table-row; padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent; }
+.exam-table tbody tr:nth-child(even) { background: var(--blue-50); }
+.exam-table tbody tr:last-child > * { border-bottom: 0; }
+.exam-table td span { color: inherit; font-size: inherit; }
+.termic-exams .termic-exam-empty { margin: 0; padding: 16px 20px; border-top: 1px solid var(--line); }
+@media(max-width:600px) { .termic-exams { padding: 0; } .termic-exams > summary { padding: 14px 16px; } }
