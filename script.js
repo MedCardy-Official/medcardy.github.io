@@ -1,10 +1,10 @@
 /* Course labels and Telegram post IDs follow the supplied MedCardy catalogue. */
 const CATEGORIES = {
-  basic: {fa:'علوم پایه',en:'Basic sciences',color:'#62decc',icon:'⌘'},
-  floating: {fa:'دروس شناور',en:'Shared courses',color:'#bcacf5',icon:'⌬'},
-  basicExam: {fa:'آزمون علوم پایه',en:'Basic sciences exam',color:'#e8ca81',icon:'✓'},
-  physiopath: {fa:'فیزیوپات',en:'Physiopathology',color:'#83baf2',icon:'♡'},
-  externship: {fa:'استاجری',en:'Externship',color:'#eaa5bb',icon:'✚'}
+  basic: {fa:'علوم پایه',en:'Basic sciences',color:'#90e0ef',icon:'⌘'},
+  floating: {fa:'دروس شناور',en:'Shared courses',color:'#caf0f8',icon:'⌬'},
+  basicExam: {fa:'آزمون علوم پایه',en:'Basic sciences exam',color:'#90e0ef',icon:'✓'},
+  physiopath: {fa:'فیزیوپات',en:'Physiopathology',color:'#90e0ef',icon:'♡'},
+  externship: {fa:'استاجری',en:'Externship',color:'#caf0f8',icon:'✚'}
 };
 const UNIVERSITIES = {medcardy:{fa:'مدکاردی',en:'MedCardy'},beheshti:{fa:'بهشتی',en:'Shahid Beheshti'},iran:{fa:'ایران',en:'Iran'},alborz:{fa:'البرز',en:'Alborz'},tehran:{fa:'تهران',en:'Tehran'},houshmand:{fa:'هوشمند',en:'Houshmand'}};
 const COURSES = [

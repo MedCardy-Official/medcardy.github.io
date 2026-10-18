@@ -1,1 +1,21 @@
-{"name":"MedCardy | مدکاردی","short_name":"MedCardy","start_url":"./","display":"standalone","background_color":"#07151c","theme_color":"#07151c","icons":[{"src":"assets/medcardy-logo.svg","sizes":"any","type":"image/svg+xml","purpose":"any"},{"src":"assets/apple-touch-icon.png","sizes":"180x180","type":"image/png"}]}
+{
+  "name": "MedCardy | مدکاردی",
+  "short_name": "MedCardy",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#03045e",
+  "theme_color": "#03045e",
+  "icons": [
+    {
+      "src": "assets/medcardy-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
