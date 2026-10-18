@@ -341,8 +341,6 @@ const translations = {
 // Keep the original presentation; update only the supplied catalogue facts.
 translations.fa.archive.categories.floating = "دروس شناور";
 translations.en.archive.categories.floating = "Shared courses";
-translations.fa.archive.universities.houshmand = "هوشمند";
-translations.en.archive.universities.houshmand = "Houshmand";
 translations.fa.status.title = "۳۷ دوره و مجموعهٔ آموزشی";
 translations.en.status.title = "37 courses and collections";
 translations.fa.status.text = "از علوم پایه تا استاجری؛ دوره و دانشگاهت را انتخاب کن و مجموعه را در تلگرام بشنو.";
@@ -467,7 +465,7 @@ languageButtons.forEach((button) => {
    for the exact fields and how to add a cover photo.
    =========================================================== */
 const CATEGORIES = ["basic", "floating", "basicExam", "physiopath", "externship"];
-const UNIVERSITIES = ["alborz", "iran", "beheshti", "tehran", "medcardy", "houshmand"];
+const UNIVERSITIES = ["alborz", "iran", "beheshti", "tehran", "medcardy"];
 
 const COURSES = [
   {
@@ -477,7 +475,11 @@ const COURSES = [
     ],
     "label": "خلاصه فیزیولوژی گایتون",
     "labelEn": "Guyton physiology summary",
-    "link": "https://t.me/medcardy_podcast/747"
+    "link": "https://t.me/medcardy_podcast/747",
+    "source": {
+      "fa": "گایتون",
+      "en": "Guyton"
+    }
   },
   {
     "category": "basic",
@@ -486,7 +488,8 @@ const COURSES = [
     ],
     "label": "آناتومی اندام",
     "labelEn": "Limb anatomy",
-    "link": "https://t.me/medcardy_podcast/220"
+    "link": "https://t.me/medcardy_podcast/220",
+    "source": null
   },
   {
     "category": "basic",
@@ -495,7 +498,8 @@ const COURSES = [
     ],
     "label": "فیزیولوژی سلول",
     "labelEn": "Cell physiology",
-    "link": "https://t.me/medcardy_podcast/831"
+    "link": "https://t.me/medcardy_podcast/831",
+    "source": null
   },
   {
     "category": "basic",
@@ -504,7 +508,8 @@ const COURSES = [
     ],
     "label": "فیزیولوژی گردش خون",
     "labelEn": "Circulatory physiology",
-    "link": "https://t.me/medcardy_podcast/548"
+    "link": "https://t.me/medcardy_podcast/548",
+    "source": null
   },
   {
     "category": "basic",
@@ -513,7 +518,8 @@ const COURSES = [
     ],
     "label": "فیزیولوژی گردش خون",
     "labelEn": "Circulatory physiology",
-    "link": "https://t.me/medcardy_podcast/483"
+    "link": "https://t.me/medcardy_podcast/483",
+    "source": null
   },
   {
     "category": "basic",
@@ -522,7 +528,8 @@ const COURSES = [
     ],
     "label": "فیزیولوژی غدد و تولیدمثل",
     "labelEn": "Endocrine & reproductive physiology",
-    "link": "https://t.me/medcardy_podcast/360"
+    "link": "https://t.me/medcardy_podcast/360",
+    "source": null
   },
   {
     "category": "basic",
@@ -531,7 +538,8 @@ const COURSES = [
     ],
     "label": "جنین‌شناسی",
     "labelEn": "Embryology",
-    "link": "https://t.me/medcardy_podcast/521"
+    "link": "https://t.me/medcardy_podcast/521",
+    "source": null
   },
   {
     "category": "basic",
@@ -540,7 +548,8 @@ const COURSES = [
     ],
     "label": "انگل‌شناسی",
     "labelEn": "Parasitology",
-    "link": "https://t.me/medcardy_podcast/670"
+    "link": "https://t.me/medcardy_podcast/670",
+    "source": null
   },
   {
     "category": "basic",
@@ -549,7 +558,8 @@ const COURSES = [
     ],
     "label": "ایمنی‌شناسی",
     "labelEn": "Immunology",
-    "link": "https://t.me/medcardy_podcast/321"
+    "link": "https://t.me/medcardy_podcast/321",
+    "source": null
   },
   {
     "category": "basic",
@@ -558,7 +568,8 @@ const COURSES = [
     ],
     "label": "اپیدمیولوژی",
     "labelEn": "Epidemiology",
-    "link": "https://t.me/medcardy_podcast/429"
+    "link": "https://t.me/medcardy_podcast/429",
+    "source": null
   },
   {
     "category": "basic",
@@ -567,7 +578,8 @@ const COURSES = [
     ],
     "label": "اصول خدمات سلامت",
     "labelEn": "Principles of health services",
-    "link": "https://t.me/medcardy_podcast/969"
+    "link": "https://t.me/medcardy_podcast/969",
+    "source": null
   },
   {
     "category": "floating",
@@ -576,7 +588,8 @@ const COURSES = [
     ],
     "label": "ژنتیک پزشکی",
     "labelEn": "Medical genetics",
-    "link": "https://t.me/medcardy_podcast/284"
+    "link": "https://t.me/medcardy_podcast/284",
+    "source": null
   },
   {
     "category": "floating",
@@ -585,7 +598,8 @@ const COURSES = [
     ],
     "label": "فارماکولوژی",
     "labelEn": "Pharmacology",
-    "link": "https://t.me/medcardy_podcast/361"
+    "link": "https://t.me/medcardy_podcast/361",
+    "source": null
   },
   {
     "category": "floating",
@@ -594,7 +608,8 @@ const COURSES = [
     ],
     "label": "روانشناسی",
     "labelEn": "Psychology",
-    "link": "https://t.me/medcardy_podcast/366"
+    "link": "https://t.me/medcardy_podcast/366",
+    "source": null
   },
   {
     "category": "basicExam",
@@ -603,7 +618,8 @@ const COURSES = [
     ],
     "label": "نکته و تست ۱۰۰۰ سوال اخیر علوم پایه پزشکی",
     "labelEn": "1,000 recent basic sciences questions",
-    "link": "https://t.me/medcardy_podcast/1003"
+    "link": "https://t.me/medcardy_podcast/1003",
+    "source": null
   },
   {
     "category": "basicExam",
@@ -612,7 +628,8 @@ const COURSES = [
     ],
     "label": "فیزیولوژی",
     "labelEn": "Physiology",
-    "link": "https://t.me/medcardy_podcast/643"
+    "link": "https://t.me/medcardy_podcast/643",
+    "source": null
   },
   {
     "category": "basicExam",
@@ -621,7 +638,8 @@ const COURSES = [
     ],
     "label": "بیوشیمی",
     "labelEn": "Biochemistry",
-    "link": "https://t.me/medcardy_podcast/718"
+    "link": "https://t.me/medcardy_podcast/718",
+    "source": null
   },
   {
     "category": "basicExam",
@@ -630,7 +648,8 @@ const COURSES = [
     ],
     "label": "باکتری و ویروس",
     "labelEn": "Bacteriology & virology",
-    "link": "https://t.me/medcardy_podcast/727"
+    "link": "https://t.me/medcardy_podcast/727",
+    "source": null
   },
   {
     "category": "basicExam",
@@ -639,7 +658,8 @@ const COURSES = [
     ],
     "label": "ایمنی‌شناسی",
     "labelEn": "Immunology",
-    "link": "https://t.me/medcardy_podcast/736"
+    "link": "https://t.me/medcardy_podcast/736",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -648,7 +668,8 @@ const COURSES = [
     ],
     "label": "کورس ریه",
     "labelEn": "Pulmonology",
-    "link": "https://t.me/medcardy_podcast/364"
+    "link": "https://t.me/medcardy_podcast/364",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -657,7 +678,8 @@ const COURSES = [
     ],
     "label": "کورس ریه",
     "labelEn": "Pulmonology",
-    "link": "https://t.me/medcardy_podcast/368"
+    "link": "https://t.me/medcardy_podcast/368",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -666,7 +688,8 @@ const COURSES = [
     ],
     "label": "کورس قلب",
     "labelEn": "Cardiology",
-    "link": "https://t.me/medcardy_podcast/150"
+    "link": "https://t.me/medcardy_podcast/150",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -675,7 +698,8 @@ const COURSES = [
     ],
     "label": "کورس اعصاب",
     "labelEn": "Neurology",
-    "link": "https://t.me/medcardy_podcast/484"
+    "link": "https://t.me/medcardy_podcast/484",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -684,17 +708,18 @@ const COURSES = [
     ],
     "label": "کورس اعصاب",
     "labelEn": "Neurology",
-    "link": "https://t.me/medcardy_podcast/486"
+    "link": "https://t.me/medcardy_podcast/486",
+    "source": null
   },
   {
     "category": "physiopath",
     "universities": [
-      "houshmand",
       "medcardy"
     ],
     "label": "کورس اعصاب",
     "labelEn": "Neurology",
-    "link": "https://t.me/medcardy_podcast/937"
+    "link": "https://t.me/medcardy_podcast/937",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -703,7 +728,8 @@ const COURSES = [
     ],
     "label": "کورس اطفال",
     "labelEn": "Pediatrics",
-    "link": "https://t.me/medcardy_podcast/495"
+    "link": "https://t.me/medcardy_podcast/495",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -713,7 +739,8 @@ const COURSES = [
     ],
     "label": "کورس جراحی",
     "labelEn": "Surgery",
-    "link": "https://t.me/medcardy_podcast/668"
+    "link": "https://t.me/medcardy_podcast/668",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -730,7 +757,8 @@ const COURSES = [
       "sessions": 44,
       "hours": 15
     },
-    "notesLink": "https://t.me/medcardy_podcast/715"
+    "notesLink": "https://t.me/medcardy_podcast/715",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -740,7 +768,8 @@ const COURSES = [
     ],
     "label": "کورس عفونی",
     "labelEn": "Infectious diseases",
-    "link": "https://t.me/medcardy_podcast/827"
+    "link": "https://t.me/medcardy_podcast/827",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -750,7 +779,8 @@ const COURSES = [
     ],
     "label": "ایمونولوژی بالینی",
     "labelEn": "Clinical immunology",
-    "link": "https://t.me/medcardy_podcast/933"
+    "link": "https://t.me/medcardy_podcast/933",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -760,7 +790,8 @@ const COURSES = [
     ],
     "label": "فارماکولوژی بالینی ۱",
     "labelEn": "Clinical pharmacology I",
-    "link": "https://t.me/medcardy_podcast/935"
+    "link": "https://t.me/medcardy_podcast/935",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -770,7 +801,8 @@ const COURSES = [
     ],
     "label": "پاتولوژی اختصاصی ۱",
     "labelEn": "Systemic pathology I",
-    "link": "https://t.me/medcardy_podcast/1000"
+    "link": "https://t.me/medcardy_podcast/1000",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -780,7 +812,8 @@ const COURSES = [
     ],
     "label": "کورس غدد",
     "labelEn": "Endocrinology",
-    "link": "https://t.me/medcardy_podcast/1007"
+    "link": "https://t.me/medcardy_podcast/1007",
+    "source": null
   },
   {
     "category": "physiopath",
@@ -789,7 +822,8 @@ const COURSES = [
     ],
     "label": "کورس هماتولوژی",
     "labelEn": "Hematology",
-    "link": "https://t.me/medcardy_podcast/574"
+    "link": "https://t.me/medcardy_podcast/574",
+    "source": null
   },
   {
     "category": "externship",
@@ -798,7 +832,8 @@ const COURSES = [
     ],
     "label": "گایدلاین عفونی",
     "labelEn": "Infectious disease guidelines",
-    "link": "https://t.me/medcardy_podcast/874"
+    "link": "https://t.me/medcardy_podcast/874",
+    "source": null
   },
   {
     "category": "externship",
@@ -807,7 +842,8 @@ const COURSES = [
     ],
     "label": "بیماری‌های عفونی",
     "labelEn": "Infectious diseases",
-    "link": "https://t.me/medcardy_podcast/149"
+    "link": "https://t.me/medcardy_podcast/149",
+    "source": null
   },
   {
     "category": "externship",
@@ -816,7 +852,8 @@ const COURSES = [
     ],
     "label": "ژنتیک بالینی",
     "labelEn": "Clinical genetics",
-    "link": "https://t.me/medcardy_podcast/522"
+    "link": "https://t.me/medcardy_podcast/522",
+    "source": null
   }
 ];
 
@@ -859,34 +896,27 @@ function renderUniversityFilters() {
 }
 
 function courseCard(course) {
-  const coverStyle = course.cover ? ` style="background-image:url('${course.cover}')"` : "";
-  const coverInner = course.cover ? "" : `<img class="course-brand-mark" src="assets/medcardy-logo.svg?v=original-1" alt="" width="64" height="64">`;
-  const universityChips = course.universities
-    .map((uni) => `<span class="archive-uni">${t(`archive.universities.${uni}`)}</span>`)
-    .join("");
-
-  const stats = course.stats
-    ? `<ul class="archive-stats">
-        <li>${applyTemplate(t("archive.statPages"), { count: formatNumber(course.stats.pages) })}</li>
-        <li>${applyTemplate(t("archive.statSessions"), { count: formatNumber(course.stats.sessions) })}</li>
-        <li>${applyTemplate(t("archive.statHours"), { count: formatNumber(course.stats.hours) })}</li>
-      </ul>`
-    : "";
-
+  const coverClass = course.cover ? " has-cover" : "";
+  const coverInner = course.cover ? `<img class="course-cover-image" src="${course.cover}" alt="${activeLanguage === "en" ? course.labelEn : course.label}" loading="lazy" width="280" height="280">` : `<img class="course-brand-mark" src="assets/medcardy-logo.svg?v=reference-2" alt="" width="64" height="64">`;
+  const universityNames = course.universities
+    .filter(uni => ["alborz", "iran", "beheshti", "tehran"].includes(uni))
+    .map(uni => t(`archive.universities.${uni}`));
+  const unspecified = activeLanguage === "fa" ? "مشخص نشده" : "Not specified";
+  const source = course.source ? course.source[activeLanguage] : unspecified;
   const notesLink = course.notesLink
-    ? `<a class="archive-notes" href="${course.notesLink}" target="_blank" rel="noopener">${t("archive.notesLink")}</a>`
-    : "";
-
+    ? `<a class="archive-notes" href="${course.notesLink}" target="_blank" rel="noopener">${t("archive.notesLink")}</a>` : "";
   return `
     <article class="archive-card">
-      <div class="archive-cover"${coverStyle}>
+      <div class="archive-cover${coverClass}">
         ${coverInner}
         <span class="archive-category-badge">${t(`archive.categories.${course.category}`)}</span>
       </div>
       <div class="archive-body">
-        <h3>${activeLanguage === "en" ? course.labelEn : course.label}</h3>
-        <div class="archive-unis">${universityChips}</div>
-        ${stats}
+        <div class="course-name"><span class="course-field-label">${activeLanguage === "fa" ? "نام دوره" : "Course name"}</span><h3>${activeLanguage === "en" ? course.labelEn : course.label}</h3></div>
+        <dl class="course-fields">
+          <div><dt>${activeLanguage === "fa" ? "دانشگاه" : "University"}</dt><dd>${universityNames.join(" / ") || unspecified}</dd></div>
+          <div><dt>${activeLanguage === "fa" ? "منبع" : "Source"}</dt><dd>${source}</dd></div>
+        </dl>
         <div class="archive-links">
           <a href="${course.link}" target="_blank" rel="noopener">${t("archive.listen")}</a>
           ${notesLink}
