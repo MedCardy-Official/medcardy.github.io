@@ -19,3 +19,5 @@ Confirmed dedicated courses go in `TERMIC_COHORT.courses` in `termic-data.js`. T
 All page links use relative HTML paths and work on GitHub Pages without server routing.
 
 Cohort panels have two sections: exam dates and created courses. In `termic-data.js`, add confirmed exams to `exams` with `semester`, localized `label`/`labelEn`, an ISO Gregorian `date` (or null) and optional `time`. Add registered semester numbers to `semesters`. One semester filter controls both sections; older terms stay in the same cohort page. Selected semesters can be shared using `?semester=1`.
+
+Semester 3 contains 11 distinct subjects from the supplied exam schedule. Midterms/finals and theory/practical exams share their subject card. All currently have `status: "processing"` and `link: null`. On publication, set `status: "ready"` and provide the confirmed course link; the card then shows Ready and its access link. Public course cards are unaffected.

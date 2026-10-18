@@ -1221,3 +1221,6 @@ html[dir="rtl"] .summit-hero h1 { margin-inline-start: 0; margin-inline-end: 0; 
 .termic-exam-date strong { font-size: .9rem; color: var(--navy-900); }
 .termic-course-heading { margin-top: 40px; }
 @media(max-width:600px) { .termic-exams { padding: 20px; } .termic-exam { flex-direction: column; align-items: stretch; gap: 12px; } .termic-exam-date { text-align: start; } }
+.course-status { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 700; }
+.course-status.is-processing { background: var(--blue-50); color: var(--navy-900); border-color: var(--blue-100); }
+.course-status.is-ready { background: var(--blue-100); color: var(--navy-950); border-color: #8ec5ff; }

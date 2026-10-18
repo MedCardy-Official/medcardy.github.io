@@ -1,8 +1,7 @@
-/* Cohort panel stays at the same address across semesters.
-   Semester 3 exam dates supplied by the user; 1405 inferred and verified
-   against all supplied weekdays. Dates stored as Gregorian ISO, displayed
-   in the Persian calendar in Persian. Unknown times stay null.
-   Add courses only after cohort-specific links are confirmed. */
+/* Permanent cohort panel. Semester 3 exams and course names follow the supplied schedule.
+   Courses combine midterm/final and theory/practical exams under their subject.
+   Status: processing or ready. Set status to ready and add the confirmed link when published.
+   Dates are Gregorian ISO, displayed in Persian calendar in Persian. Unknown times stay null. */
 const TERMIC_COHORT = {
   "university": "beheshti",
   "entryYear": 1404,
@@ -165,6 +164,139 @@ const TERMIC_COHORT = {
       "time": null
     }
   ],
-  "courses": [],
+  "courses": [
+    {
+      "semester": 3,
+      "label": "زبان عمومی",
+      "labelEn": "General English",
+      "category": "floating",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    },
+    {
+      "semester": 3,
+      "label": "زبان تخصصی ۱",
+      "labelEn": "Medical English I",
+      "category": "floating",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    },
+    {
+      "semester": 3,
+      "label": "زبان تخصصی ۲",
+      "labelEn": "Medical English II",
+      "category": "floating",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    },
+    {
+      "semester": 3,
+      "label": "علوم تشریح حواس ویژه",
+      "labelEn": "Special senses anatomy",
+      "category": "basic",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    },
+    {
+      "semester": 3,
+      "label": "فیزیولوژی اعصاب و حواس ویژه",
+      "labelEn": "Neurophysiology and special senses",
+      "category": "basic",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    },
+    {
+      "semester": 3,
+      "label": "قارچ‌شناسی",
+      "labelEn": "Mycology",
+      "category": "basic",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    },
+    {
+      "semester": 3,
+      "label": "انگل‌شناسی",
+      "labelEn": "Parasitology",
+      "category": "basic",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    },
+    {
+      "semester": 3,
+      "label": "علوم تشریح سر و گردن",
+      "labelEn": "Head and neck anatomy",
+      "category": "basic",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    },
+    {
+      "semester": 3,
+      "label": "ایمنی‌شناسی",
+      "labelEn": "Immunology",
+      "category": "basic",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    },
+    {
+      "semester": 3,
+      "label": "انقلاب اسلامی",
+      "labelEn": "Islamic Revolution",
+      "category": "floating",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    },
+    {
+      "semester": 3,
+      "label": "علوم تشریح اعصاب",
+      "labelEn": "Neuroanatomy",
+      "category": "basic",
+      "universities": [
+        "beheshti"
+      ],
+      "source": null,
+      "status": "processing",
+      "link": null
+    }
+  ],
   "defaultSemester": 3
 };

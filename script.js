@@ -393,8 +393,8 @@ Object.assign(translations.en.termic, {universityFilter:"University", entryFilte
 translations.fa.termic.logoAlt = "نشان دانشگاه علوم پزشکی شهید بهشتی";
 translations.en.termic.logoAlt = "Shahid Beheshti University of Medical Sciences logo";
 
-Object.assign(translations.fa.termic, {panelTitle:"پنل این ورودی", examsTitle:"تاریخ امتحانات", madeCourses:"دوره‌های ساخته‌شده", examsEmpty:"برای ترم انتخاب‌شده هنوز برنامهٔ امتحانی ثبت نشده است.", examCount:"{count} امتحان", dateUnknown:"تاریخ اعلام نشده", semesterNote:"با انتخاب ترم، امتحانات و دوره‌های همان ترم نمایش داده می‌شوند. محتوای ترم‌های قبل در همین پنل باقی می‌ماند."});
-Object.assign(translations.en.termic, {panelTitle:"Your cohort panel", examsTitle:"Exam dates", madeCourses:"Courses we have created", examsEmpty:"No exam schedule has been added for the selected semester.", examCount:"{count} exams", dateUnknown:"Date not announced", semesterNote:"Choose a semester to view its exams and courses. Previous semesters remain available in this same panel."});
+Object.assign(translations.fa.termic, {panelTitle:"پنل این ورودی", examsTitle:"تاریخ امتحانات", madeCourses:"دوره‌های این ورودی", examsEmpty:"برای ترم انتخاب‌شده هنوز برنامهٔ امتحانی ثبت نشده است.", examCount:"{count} امتحان", dateUnknown:"تاریخ اعلام نشده", semesterNote:"با انتخاب ترم، امتحانات و دوره‌های همان ترم نمایش داده می‌شوند. محتوای ترم‌های قبل در همین پنل باقی می‌ماند."});
+Object.assign(translations.en.termic, {panelTitle:"Your cohort panel", examsTitle:"Exam dates", madeCourses:"Courses for this cohort", examsEmpty:"No exam schedule has been added for the selected semester.", examCount:"{count} exams", dateUnknown:"Date not announced", semesterNote:"Choose a semester to view its exams and courses. Previous semesters remain available in this same panel."});
 
 const languageButtons = document.querySelectorAll("[data-language-button]");
 const numberElements = document.querySelectorAll("[data-number-en][data-number-fa]");
@@ -930,6 +930,9 @@ function courseCard(course) {
   const source = course.source ? course.source[activeLanguage] : unspecified;
   const notesLink = course.notesLink
     ? `<a class="archive-notes" href="${course.notesLink}" target="_blank" rel="noopener">${t("archive.notesLink")}</a>` : "";
+  const termicStatus = course.status === undefined ? "" : `<span class="course-status ${course.status === "ready" ? "is-ready" : "is-processing"}"><span aria-hidden="true">${course.status === "ready" ? "✓" : "◷"}</span>${activeLanguage === "fa" ? (course.status === "ready" ? "آماده" : "در حال پردازش") : (course.status === "ready" ? "Ready" : "Processing")}</span>`;
+  const canOpen = course.status === undefined || course.status === "ready";
+  const openLink = canOpen && course.link ? `<a href="${course.link}" target="_blank" rel="noopener">${t("archive.listen")}</a>` : "";
   return `
     <article class="archive-card">
       <div class="archive-cover${coverClass}">
@@ -943,8 +946,9 @@ function courseCard(course) {
           <div><dt>${activeLanguage === "fa" ? "منبع" : "Source"}</dt><dd>${source}</dd></div>
         </dl>
         <div class="archive-links">
-          <a href="${course.link}" target="_blank" rel="noopener">${t("archive.listen")}</a>
-          ${notesLink}
+          ${termicStatus}
+          ${openLink}
+          ${canOpen ? notesLink : ""}
         </div>
       </div>
     </article>`;
