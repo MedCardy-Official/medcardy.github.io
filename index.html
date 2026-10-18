@@ -7,20 +7,20 @@
     <meta name="theme-color" content="#0a2d63">
     <meta property="og:title" content="MedCardy Podcast">
     <meta property="og:description" content="A public home for MedCardy's audio podcast of medical books and course sessions.">
-    <meta property="og:image" content="assets/medcardy-logo.svg?v=original-2">
+    <meta property="og:image" content="assets/medcardy-logo.svg?v=reference-1">
     <title>MedCardy Podcast</title>
-    <link rel="icon" href="assets/medcardy-logo.svg?v=original-2" type="image/svg+xml">
+    <link rel="icon" href="assets/medcardy-logo.svg?v=reference-1" type="image/svg+xml">
     <link rel="manifest" href="site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="styles.css?v=original-2">
+    <link rel="stylesheet" href="styles.css?v=reference-1">
   </head>
   <body>
     <a class="skip-link" href="#episodes" data-i18n="skip">Skip to content</a>
     <header class="site-header" aria-label="Site header" data-i18n-aria-label="labels.siteHeader">
       <a class="brand" href="#top" aria-label="MedCardy Podcast home" data-i18n-aria-label="labels.home">
-        <img src="assets/medcardy-logo.svg?v=original-2" alt="" width="40" height="40">
+        <img src="assets/medcardy-logo.svg?v=reference-1" alt="" width="40" height="40">
         <span>MedCardy</span>
       </a>
       <div class="header-actions">
@@ -31,6 +31,7 @@
           <a href="#team" data-i18n="nav.team">Team</a>
           <a href="https://t.me/medcardy_podcast" data-i18n="nav.telegram">Telegram</a>
         </nav>
+        <a class="header-cta" href="https://t.me/MedCardy_Service" data-i18n="hero.contact">ارتباط با مدکاردی</a>
         <div class="language-switch" aria-label="Language" data-i18n-aria-label="labels.language">
           <button class="language-button active" type="button" data-language-button="en" aria-pressed="true">EN</button>
           <button class="language-button" type="button" data-language-button="fa" aria-pressed="false">FA</button>
@@ -39,31 +40,29 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-inner">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Audio podcast for medical students</p>
-          <div class="hero-brand"><img src="assets/medcardy-logo.svg?v=original-2" alt="" width="86" height="86"><h1 id="hero-title" dir="ltr">MedCardy</h1></div>
-          <p class="hero-copy" data-i18n="hero.copy">
-            A public home for MedCardy's audio podcast — session-by-session and chapter-by-chapter summaries of medical textbooks and course material, built by the MedCardy team.
-          </p>
-          <div class="hero-actions" aria-label="Primary links" data-i18n-aria-label="labels.primaryLinks">
-            <a class="button primary" href="https://t.me/medcardy_podcast" data-i18n="hero.telegram">Join Telegram</a>
-            <a class="button secondary" href="https://medcardy.com" data-i18n="hero.platform">Open MedCardy platform</a>
+      <section class="hero summit-hero" aria-labelledby="hero-title">
+        <svg class="hero-network" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M-30 180 170 90 390 310 690 130 940 280 1260 100 1470 210M170 90 230 580 390 310 640 630 940 280 1140 610 1260 100M-30 670 230 580 640 630 830 780M390 310 940 280 1470 490M1140 610 1470 490"/></g><g fill="currentColor"><circle cx="170" cy="90" r="5"/><circle cx="390" cy="310" r="6"/><circle cx="690" cy="130" r="4"/><circle cx="940" cy="280" r="5"/><circle cx="1260" cy="100" r="5"/><circle cx="230" cy="580" r="6"/><circle cx="640" cy="630" r="4"/><circle cx="1140" cy="610" r="6"/></g></svg>
+        <div class="hero-layout">
+          <div class="hero-inner">
+            <p class="eyebrow hero-badge" data-i18n="hero.eyebrow">پادکست آموزشی پزشکی</p>
+            <h1 id="hero-title" dir="ltr">MedCardy</h1>
+            <h2 class="hero-subtitle" data-i18n="hero.headline">از اول ترم،<br>تا شب امتحان.</h2>
+            <p class="hero-copy" data-i18n="hero.copy">خلاصهٔ شنیداری کتاب‌ها و جلسات پزشکی؛ برای یادگیری، مرور و همراهی در مسیر دانشگاه.</p>
+            <dl class="signals" aria-label="روش یادگیری" data-i18n-aria-label="labels.podcastSignals">
+              <div><dt data-i18n="hero.signalListenTitle">گوش کن</dt><dd data-i18n="hero.signalListenText">خلاصهٔ جلسه و فصل</dd></div>
+              <div><dt data-i18n="hero.signalLearnTitle">یاد بگیر</dt><dd data-i18n="hero.signalLearnText">نکات متمرکز بر امتحان</dd></div>
+              <div><dt data-i18n="hero.signalReviewTitle">مرور کن</dt><dd data-i18n="hero.signalReviewText">مرور پیش از امتحان</dd></div>
+            </dl>
+            <div class="hero-actions" aria-label="دسترسی سریع" data-i18n-aria-label="labels.primaryLinks"><a class="button primary" href="#courses"><span data-i18n="hero.explore">مشاهدهٔ دوره‌ها</span><span aria-hidden="true">↗</span></a><a class="button secondary" href="https://t.me/medcardy_podcast" data-i18n="hero.telegram">عضویت در تلگرام</a></div>
+            <a class="hero-platform" href="https://medcardy.com" data-i18n="hero.platform">پلتفرم مدکاردی ↗</a>
           </div>
-          <dl class="signals" aria-label="Podcast signals" data-i18n-aria-label="labels.podcastSignals">
-            <div>
-              <dt data-i18n="hero.signalListenTitle">Listen</dt>
-              <dd data-i18n="hero.signalListenText">Session and chapter summaries</dd>
-            </div>
-            <div>
-              <dt data-i18n="hero.signalLearnTitle">Learn</dt>
-              <dd data-i18n="hero.signalLearnText">Exam-focused notes</dd>
-            </div>
-            <div>
-              <dt data-i18n="hero.signalReviewTitle">Review</dt>
-              <dd data-i18n="hero.signalReviewText">Quick pre-exam recaps</dd>
-            </div>
-          </dl>
+          <aside class="hero-overview" aria-labelledby="overview-title">
+            <div class="overview-brand"><img src="assets/medcardy-logo.svg?v=reference-1" alt="" width="48" height="48"><span dir="ltr">MEDCARDY PODCAST</span></div>
+            <p class="overview-kicker" data-i18n="hero.overviewKicker">همراه مسیر پزشکی تو</p>
+            <h2 id="overview-title" data-i18n="hero.overviewTitle">یک کتابخانه، پنج مسیر</h2>
+            <div class="overview-stats"><div><strong data-number-en="37" data-number-fa="۳۷">۳۷</strong><span data-i18n="hero.courseCount">دوره و مجموعه</span></div><div><strong data-number-en="5" data-number-fa="۵">۵</strong><span data-i18n="hero.pathCount">مسیر آموزشی</span></div><div><strong data-number-en="4" data-number-fa="۴">۴</strong><span data-i18n="hero.universityCount">دانشگاه</span></div><div><strong class="overview-audio" aria-hidden="true">♫</strong><span data-i18n="hero.audioFormat">یادگیری شنیداری</span></div></div>
+            <div class="overview-footer"><span class="overview-dot" aria-hidden="true"></span><span data-i18n="hero.overviewFooter">از علوم پایه تا استاجری</span></div>
+          </aside>
         </div>
       </section>
 
@@ -207,6 +206,6 @@
       <a href="https://t.me/medcardy_podcast" data-i18n="footer.telegram">Telegram channel</a>
     </footer>
 
-    <script src="script.js?v=original-2"></script>
+    <script src="script.js?v=reference-1"></script>
   </body>
 </html>

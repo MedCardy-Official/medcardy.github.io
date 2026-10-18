@@ -358,6 +358,22 @@ translations.fa.repos.subscriptionTitle = "اشتراک مدکاردی یونی�
 translations.en.repos.subscriptionTitle = "MedCardy University subscription";
 translations.fa.repos.subscriptionText = "از اول ترم تا شب امتحان؛ اشتراک و سفارش گروهی ترمی.";
 translations.en.repos.subscriptionText = "From the start of term to exam night: term subscriptions and group orders.";
+
+Object.assign(translations.fa.hero, {
+  eyebrow: "پادکست آموزشی پزشکی", headline: "از اول ترم، تا شب امتحان.",
+  copy: "خلاصهٔ شنیداری کتاب‌ها و جلسات پزشکی؛ برای یادگیری، مرور و همراهی در مسیر دانشگاه.",
+  explore: "مشاهدهٔ دوره‌ها", contact: "ارتباط با مدکاردی", platform: "پلتفرم مدکاردی ↗",
+  overviewKicker: "همراه مسیر پزشکی تو", overviewTitle: "یک کتابخانه، پنج مسیر",
+  courseCount: "دوره و مجموعه", pathCount: "مسیر آموزشی", universityCount: "دانشگاه", audioFormat: "یادگیری شنیداری", overviewFooter: "از علوم پایه تا استاجری"
+});
+Object.assign(translations.en.hero, {
+  eyebrow: "MEDICAL AUDIO LEARNING", headline: "From your first lecture to exam night.",
+  copy: "Audio summaries of medical textbooks and lectures. A companion for learning, review and your university journey.",
+  explore: "Explore courses", contact: "Contact MedCardy", platform: "MedCardy platform ↗",
+  overviewKicker: "YOUR MEDICAL LEARNING COMPANION", overviewTitle: "One library. Five paths.",
+  courseCount: "Courses & collections", pathCount: "Learning paths", universityCount: "Universities", audioFormat: "Audio learning", overviewFooter: "From basic sciences to externship"
+});
+
 const languageButtons = document.querySelectorAll("[data-language-button]");
 const numberElements = document.querySelectorAll("[data-number-en][data-number-fa]");
 let activeLanguage = getStoredLanguage();
