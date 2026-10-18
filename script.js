@@ -372,6 +372,20 @@ Object.assign(translations.en.hero, {
   courseCount: "Courses & collections", pathCount: "Learning paths", universityCount: "Universities", audioFormat: "Audio learning", overviewFooter: "From basic sciences to externship"
 });
 
+
+translations.fa.termic = {
+ nav: "مدکاردی ترمیک", eyebrow: "مخصوص دانشگاه و ورودی تو", description: "محتوای اختصاصی هر ترم، بر اساس جزوه‌های خودتان؛ دانشگاه و ورودی‌ات را انتخاب کن.",
+ cohort: "ورودی ۱۴۰۴", university: "دانشگاه علوم پزشکی شهید بهشتی", cohortDescription: "صفحهٔ اختصاصی درس‌ها، جزوه‌ها و پادکست‌های این ورودی.", open: "ورود به صفحهٔ ترمیک ↗",
+ back: "↗ بازگشت به مدکاردی ترمیک", pageDescription: "مجموعه‌های اختصاصی این ورودی، بر اساس جزوه‌های دانشگاه؛ ترم و درس موردنظرت را انتخاب کن.", coursesTitle: "درس‌های این ورودی", semester: "ترم", search: "جست‌وجوی درس", clear: "پاک کردن فیلترها", support: "پیگیری محتوا و پشتیبانی ↗", home: "صفحهٔ اصلی مدکاردی",
+ allSemesters: "همهٔ ترم‌ها", semesterLabel: "ترم {number}", allCategories: "همهٔ مقاطع", placeholder: "نام درس یا منبع را بنویس…", emptyTitle: "محتوای این ورودی در حال تکمیل است", emptyCopy: "هنوز درسی برای این ورودی ثبت نشده است. پس از اضافه‌شدن مجموعه‌ها، از همین صفحه به آن‌ها دسترسی خواهید داشت.", noMatch: "درسی با این فیلترها پیدا نشد", noMatchCopy: "عبارت جست‌وجو یا فیلترها را تغییر دهید.", count: "{count} دوره"
+};
+translations.en.termic = {
+ nav: "MedCardy Termic", eyebrow: "FOR YOUR UNIVERSITY AND COHORT", description: "Term-by-term content made from your own university notes. Choose your university and cohort.",
+ cohort: "1404 entry cohort", university: "Shahid Beheshti University of Medical Sciences", cohortDescription: "Dedicated courses, notes and podcasts for this cohort.", open: "Open cohort page ↗",
+ back: "↗ Back to MedCardy Termic", pageDescription: "Dedicated collections based on this cohort’s university notes. Choose your semester and course.", coursesTitle: "Courses for this cohort", semester: "Semester", search: "Search courses", clear: "Clear filters", support: "Content enquiries & support ↗", home: "MedCardy home",
+ allSemesters: "All semesters", semesterLabel: "Semester {number}", allCategories: "All levels", placeholder: "Search a course or source…", emptyTitle: "Content for this cohort is being prepared", emptyCopy: "No courses have been added for this cohort yet. Published collections will be available here.", noMatch: "No matching courses", noMatchCopy: "Try another search or change the filters.", count: "{count} courses"
+};
+
 const languageButtons = document.querySelectorAll("[data-language-button]");
 const numberElements = document.querySelectorAll("[data-number-en][data-number-fa]");
 let activeLanguage = getStoredLanguage();
@@ -452,6 +466,7 @@ function applyLanguage(language) {
   renderCategoryFilters();
   renderUniversityFilters();
   renderArchive();
+  document.dispatchEvent(new Event("medcardy-language-change"));
 }
 
 languageButtons.forEach((button) => {

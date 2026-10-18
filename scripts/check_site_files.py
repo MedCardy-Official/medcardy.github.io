@@ -5,6 +5,9 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 required = [
     "index.html",
+    "termic-beheshti-1404.html",
+    "termic-data.js",
+    "termic.js",
     "styles.css",
     "script.js",
     "assets/medcardy-logo.svg",
@@ -12,7 +15,7 @@ required = [
     "site.webmanifest",
 ]
 
-html = (ROOT / "index.html").read_text(encoding="utf-8")
+html = "\n".join(page.read_text(encoding="utf-8") for page in ROOT.glob("*.html"))
 sources = re.findall(r"(?:src|data-src)=\"([^\"]+)\"", html)
 required.extend(urlsplit(source).path for source in sources if not source.startswith("http"))
 
