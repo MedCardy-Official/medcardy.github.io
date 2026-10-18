@@ -390,6 +390,8 @@ translations.en.termic = {
 Object.assign(translations.fa.termic, {universityFilter:"دانشگاه", entryFilter:"ورودی", allUniversities:"همهٔ دانشگاه‌ها", allEntries:"همهٔ ورودی‌ها", entryLabel:"ورودی {year}", directoryCount:"{count} صفحهٔ ترمیک", directoryEmpty:"صفحه‌ای با این دانشگاه و ورودی پیدا نشد."});
 Object.assign(translations.en.termic, {universityFilter:"University", entryFilter:"Entry year", allUniversities:"All universities", allEntries:"All entry years", entryLabel:"{year} entry cohort", directoryCount:"{count} cohort pages", directoryEmpty:"No pages match this university and entry year."});
 
+translations.fa.termic.logoAlt = "نشان دانشگاه علوم پزشکی شهید بهشتی";
+translations.en.termic.logoAlt = "Shahid Beheshti University of Medical Sciences logo";
 const languageButtons = document.querySelectorAll("[data-language-button]");
 const numberElements = document.querySelectorAll("[data-number-en][data-number-fa]");
 let activeLanguage = getStoredLanguage();

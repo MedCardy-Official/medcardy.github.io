@@ -1195,3 +1195,14 @@ html[dir="rtl"] .summit-hero h1 { margin-inline-start: 0; margin-inline-end: 0; 
 .termic-directory-tools label { flex: 1; }
 .termic-symbol img { width: 100%; height: 100%; object-fit: contain; background: #fff; border-radius: 12px; }
 .termic-directory-empty { padding: 28px; border: 1px dashed var(--line); border-radius: 14px; color: var(--muted); }
+/* Original white university mark, preserved in full on a navy surface. */
+.university-logo-frame { display: grid; place-items: center; width: 144px; height: 144px; padding: 12px; border-radius: 18px; background: var(--navy-950); flex-shrink: 0; }
+.university-logo-frame img, .termic-symbol.university-logo-frame img { display: block; width: 100%; height: 100%; object-fit: contain; background: transparent; border-radius: 0; }
+.termic-symbol.university-logo-frame { width: 104px; height: 104px; padding: 8px; background: var(--navy-950); }
+.termic-university-identity { display: flex; align-items: center; gap: 24px; margin-top: 10px; }
+@media (max-width:760px) {
+  .termic-cohort-copy { flex-basis: calc(100% - 125px); }
+  .termic-university-identity { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .termic-university-identity .university-logo-frame { width: 128px; height: 128px; }
+}
+@media (max-width:380px) { .termic-cohort-copy { flex-basis: 100%; } }
