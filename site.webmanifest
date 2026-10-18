@@ -1,15 +1,1 @@
-{
-  "name": "MedCardy Podcast",
-  "short_name": "MedCardy",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#f5f8fc",
-  "theme_color": "#0a2d63",
-  "icons": [
-    {
-      "src": "assets/medcardy-logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    }
-  ]
-}
+{"name":"MedCardy | مدکاردی","short_name":"MedCardy","start_url":"./","display":"standalone","background_color":"#07151c","theme_color":"#07151c","icons":[{"src":"assets/medcardy-logo.svg","sizes":"any","type":"image/svg+xml","purpose":"any"},{"src":"assets/apple-touch-icon.png","sizes":"180x180","type":"image/png"}]}

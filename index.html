@@ -1,295 +1,33 @@
 <!doctype html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="MedCardy Podcast: audio summaries of medical textbooks and course sessions, published on Telegram.">
-    <meta name="theme-color" content="#0a2d63">
-    <meta property="og:title" content="MedCardy Podcast">
-    <meta property="og:description" content="A public home for MedCardy's audio podcast of medical books and course sessions.">
-    <meta property="og:image" content="assets/medcardy-logo.svg">
-    <title>MedCardy Podcast</title>
-    <link rel="icon" href="assets/medcardy-logo.svg" type="image/svg+xml">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#episodes" data-i18n="skip">Skip to content</a>
-    <header class="site-header" aria-label="Site header" data-i18n-aria-label="labels.siteHeader">
-      <a class="brand" href="#top" aria-label="MedCardy Podcast home" data-i18n-aria-label="labels.home">
-        <img src="assets/medcardy-logo.svg" alt="" width="40" height="40">
-        <span>MedCardy</span>
-      </a>
-      <div class="header-actions">
-        <nav aria-label="Main links" data-i18n-aria-label="labels.mainLinks">
-          <a href="#episodes" data-i18n="nav.episodes">Episodes</a>
-          <a href="#courses" data-i18n="nav.courses">Courses</a>
-          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
-          <a href="#team" data-i18n="nav.team">Team</a>
-          <a href="#highlights" data-i18n="nav.highlights">Highlights</a>
-          <a href="#links" data-i18n="nav.links">Links</a>
-          <a href="https://t.me/medcardy_podcast" data-i18n="nav.telegram">Telegram</a>
-        </nav>
-        <div class="language-switch" aria-label="Language" data-i18n-aria-label="labels.language">
-          <button class="language-button active" type="button" data-language-button="en" aria-pressed="true">EN</button>
-          <button class="language-button" type="button" data-language-button="fa" aria-pressed="false">FA</button>
-        </div>
-      </div>
-    </header>
-
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-inner">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Audio podcast for medical students</p>
-          <h1 id="hero-title">MedCardy</h1>
-          <p class="hero-copy" data-i18n="hero.copy">
-            A public home for MedCardy's audio podcast — session-by-session and chapter-by-chapter summaries of medical textbooks and course material, built by the MedCardy team.
-          </p>
-          <div class="hero-actions" aria-label="Primary links" data-i18n-aria-label="labels.primaryLinks">
-            <a class="button primary" href="https://t.me/medcardy_podcast" data-i18n="hero.telegram">Join Telegram</a>
-            <a class="button secondary" href="https://medcardy.com" data-i18n="hero.platform">Open MedCardy platform</a>
-          </div>
-          <dl class="signals" aria-label="Podcast signals" data-i18n-aria-label="labels.podcastSignals">
-            <div>
-              <dt data-i18n="hero.signalListenTitle">Listen</dt>
-              <dd data-i18n="hero.signalListenText">Session and chapter summaries</dd>
-            </div>
-            <div>
-              <dt data-i18n="hero.signalLearnTitle">Learn</dt>
-              <dd data-i18n="hero.signalLearnText">Exam-focused notes</dd>
-            </div>
-            <div>
-              <dt data-i18n="hero.signalReviewTitle">Review</dt>
-              <dd data-i18n="hero.signalReviewText">Quick pre-exam recaps</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-
-      <section class="status-strip" aria-label="Site status" data-i18n-aria-label="labels.siteStatus">
-        <div>
-          <strong data-i18n="status.title">12 episodes published</strong>
-          <span data-i18n="status.text">Session recaps, book chapter summaries, and quick pre-exam reviews, all published on Telegram. New episodes go out every week.</span>
-        </div>
-        <a href="https://t.me/medcardy_podcast" data-i18n="status.link">Open channel</a>
-      </section>
-
-      <section class="material-section" id="episodes" aria-labelledby="episodes-title">
-        <div class="section-heading wide">
-          <div>
-            <p class="eyebrow" data-i18n="materials.eyebrow">Current material</p>
-            <h2 id="episodes-title" data-i18n="materials.title">Published and organized</h2>
-          </div>
-          <a class="text-link" href="https://t.me/medcardy_podcast" data-i18n="materials.allEpisodes">All episodes on Telegram</a>
-        </div>
-        <div class="material-grid" aria-label="Material counts" data-i18n-aria-label="labels.materialCounts">
-          <article class="metric-card">
-            <strong data-number-en="4" data-number-fa="۴">4</strong>
-            <h3 data-i18n="materials.categoriesTitle">Exam levels covered</h3>
-            <p data-i18n="materials.categoriesText">Basic sciences, basic sciences exam, physiopathology, and externship material.</p>
-            <a href="#courses" data-i18n="materials.categoriesLink">Open archive</a>
-          </article>
-          <article class="metric-card">
-            <strong data-number-en="5" data-number-fa="۵">5</strong>
-            <h3 data-i18n="materials.universitiesTitle">Universities covered</h3>
-            <p data-i18n="materials.universitiesText">Course recordings sourced from several medical universities, filterable by school.</p>
-            <a href="#courses" data-i18n="materials.universitiesLink">Open archive</a>
-          </article>
-          <article class="metric-card">
-            <strong data-number-en="23" data-number-fa="۲۳">23</strong>
-            <h3 data-i18n="materials.episodesTitle">Episodes published</h3>
-            <p data-i18n="materials.episodesText">Audio episodes live on the Telegram channel today.</p>
-            <a href="https://t.me/medcardy_podcast" data-i18n="materials.episodesLink">Open channel</a>
-          </article>
-          <article class="metric-card">
-            <strong data-number-en="1" data-number-fa="۱">1</strong>
-            <h3 data-i18n="materials.platformTitle">Companion platform</h3>
-            <p data-i18n="materials.platformText">The MedCardy website hosts question packs and exam review alongside the podcast.</p>
-            <a href="https://medcardy.com" data-i18n="materials.platformLink">Open platform</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="path-section" id="how" aria-labelledby="how-title">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="path.eyebrow">How it works</p>
-          <h2 id="how-title" data-i18n="path.title">From the page to your ears</h2>
-        </div>
-        <div class="path-grid">
-          <article>
-            <span class="step-mark" data-number-en="01" data-number-fa="۰۱">01</span>
-            <h3 data-i18n="path.oneTitle">Pick a book or course</h3>
-            <p data-i18n="path.oneText">Each term the team picks the textbooks and courses medical students rely on most.</p>
-          </article>
-          <article>
-            <span class="step-mark" data-number-en="02" data-number-fa="۰۲">02</span>
-            <h3 data-i18n="path.twoTitle">Record session by session</h3>
-            <p data-i18n="path.twoText">Each chapter or session becomes its own audio episode, focused on exam-relevant points.</p>
-          </article>
-          <article>
-            <span class="step-mark" data-number-en="03" data-number-fa="۰۳">03</span>
-            <h3 data-i18n="path.threeTitle">Publish on Telegram</h3>
-            <p data-i18n="path.threeText">Episodes go out in order on the Telegram channel, and stay linked here too.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="archive-section" id="courses" aria-labelledby="courses-title">
-        <div class="section-heading wide">
-          <div>
-            <p class="eyebrow" data-i18n="archive.eyebrow">Course archive</p>
-            <h2 id="courses-title" data-i18n="archive.title">Browse by level and university</h2>
-          </div>
-          <p class="section-note" data-i18n="archive.note">Pick an exam level, then narrow by university. Each card opens the matching Telegram post.</p>
-        </div>
-
-        <div class="archive-filters">
-          <div class="filters" id="categoryFilters" aria-label="Exam level filters" data-i18n-aria-label="labels.categoryFilters"></div>
-          <div class="filters filters-secondary" id="universityFilters" aria-label="University filters" data-i18n-aria-label="labels.universityFilters"></div>
-        </div>
-
-        <p class="repo-count archive-count" id="archiveCount" aria-live="polite"></p>
-
-        <div class="archive-grid" id="archiveGrid"></div>
-        <p class="empty-state" id="archiveEmpty" hidden data-i18n="archive.empty">No courses match this filter.</p>
-      </section>
-
-      <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
-        <div class="section-heading wide">
-          <div>
-            <p class="eyebrow" data-i18n="gallery.eyebrow">Gallery</p>
-            <h2 id="gallery-title" data-i18n="gallery.title">Recording moments</h2>
-          </div>
-          <p class="section-note" data-i18n="gallery.note">Add real photos to assets/gallery and swap the placeholder tiles below.</p>
-        </div>
-        <div class="gallery-grid" aria-label="Gallery photos" data-i18n-aria-label="labels.galleryPhotos">
-          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo1">Recording session</figcaption></figure>
-          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo2">Course material</figcaption></figure>
-          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo3">Team at work</figcaption></figure>
-          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo4">Studio setup</figcaption></figure>
-          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo5">Episode planning</figcaption></figure>
-          <figure class="gallery-placeholder"><span data-i18n="gallery.placeholder">Photo</span><figcaption data-i18n="gallery.photo6">Listener feedback</figcaption></figure>
-        </div>
-      </section>
-
-      <section class="teachers-section" id="team" aria-labelledby="team-title">
-        <div class="section-heading wide">
-          <div>
-            <p class="eyebrow" data-i18n="teachers.eyebrow">Team</p>
-            <h2 id="team-title" data-i18n="teachers.title">Built by</h2>
-          </div>
-          <p class="section-note" data-i18n="teachers.note">The people building MedCardy's platform and podcast.</p>
-        </div>
-        <div class="teacher-grid">
-          <article class="teacher-card">
-            <div class="teacher-avatar" aria-hidden="true">MHK</div>
-            <div>
-              <h3 data-i18n="teachers.mohammad.name">Mohammad Hossein Kazemi</h3>
-              <ul>
-                <li data-i18n="teachers.mohammad.one">Co-founder, MedCardy</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="teacher-card">
-            <div class="teacher-avatar" aria-hidden="true">BZ</div>
-            <div>
-              <h3 data-i18n="teachers.benjamin.name">Benjamin Zolfaghari</h3>
-              <ul>
-                <li data-i18n="teachers.benjamin.one">Co-founder, MedCardy</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="videos-section" id="highlights" aria-labelledby="highlights-title">
-        <div class="section-heading wide">
-          <div>
-            <p class="eyebrow" data-i18n="videos.eyebrow">Episode highlights</p>
-            <h2 id="highlights-title" data-i18n="videos.title">Listen first</h2>
-          </div>
-          <p class="section-note" data-i18n="videos.note">A few episodes to start with, public on Telegram.</p>
-        </div>
-        <div class="video-grid">
-          <article class="video-card">
-            <span data-i18n="videos.one.kicker">Physiology, session 1</span>
-            <h3 data-i18n="videos.one.title">Cell membrane and organelles</h3>
-            <p data-i18n="videos.one.text">The opening session on membrane structure, glycocalyx function, and the lysosome-peroxisome distinction.</p>
-            <a href="https://t.me/medcardy_podcast/1" data-i18n="videos.listen">Listen on Telegram</a>
-          </article>
-          <article class="video-card">
-            <span data-i18n="videos.two.kicker">Physiology, session 2</span>
-            <h3 data-i18n="videos.two.title">Sarcomere and muscle contraction</h3>
-            <p data-i18n="videos.two.text">A walk through the cross-bridge cycle, excitation-contraction coupling, and the classic exam traps.</p>
-            <a href="https://t.me/medcardy_podcast/2" data-i18n="videos.listen">Listen on Telegram</a>
-          </article>
-          <article class="video-card">
-            <span data-i18n="videos.three.kicker">Guyton, chapter 1</span>
-            <h3 data-i18n="videos.three.title">Introduction and homeostasis</h3>
-            <p data-i18n="videos.three.text">The first chapter summary from the Guyton reference textbook series.</p>
-            <a href="https://t.me/medcardy_podcast/4" data-i18n="videos.listen">Listen on Telegram</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="repo-section" id="links" aria-labelledby="links-title">
-        <div class="section-heading wide">
-          <div>
-            <p class="eyebrow" data-i18n="repos.eyebrow">Links and resources</p>
-            <h2 id="links-title" data-i18n="repos.title">Everything in one place</h2>
-          </div>
-          <div class="filters" aria-label="Link filters" data-i18n-aria-label="labels.linkFilters">
-            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true" data-i18n="repos.filterAll">All</button>
-            <button class="filter-button" type="button" data-filter="telegram" aria-pressed="false" data-i18n="repos.filterTelegram">Telegram</button>
-            <button class="filter-button" type="button" data-filter="platform" aria-pressed="false" data-i18n="repos.filterPlatform">Platform</button>
-          </div>
-        </div>
-
-        <div class="repo-tools">
-          <label class="sr-only" for="link-search" data-i18n="repos.searchLabel">Search links</label>
-          <input id="link-search" type="search" name="link-search" placeholder="Search links" autocomplete="off" dir="auto" data-i18n-placeholder="repos.searchPlaceholder">
-          <p class="repo-count" aria-live="polite">Showing all links</p>
-        </div>
-
-        <div class="repo-grid">
-          <article class="repo-card" data-kind="telegram">
-            <span class="repo-kind" data-i18n="repos.kindTelegram">Telegram</span>
-            <h3>MedCardy Podcast</h3>
-            <p data-i18n="repos.channelText">Every course episode, in order, as soon as it's ready.</p>
-            <a href="https://t.me/medcardy_podcast" data-i18n="repos.openLink">Open link</a>
-          </article>
-          <article class="repo-card" data-kind="telegram">
-            <span class="repo-kind" data-i18n="repos.kindTelegram">Telegram</span>
-            <h3>MedCardy</h3>
-            <p data-i18n="repos.mainChannelText">The main channel — announcements, updates, and the full MedCardy project.</p>
-            <a href="https://t.me/MedCardy" data-i18n="repos.openLink">Open link</a>
-          </article>
-          <article class="repo-card" data-kind="telegram">
-            <span class="repo-kind" data-i18n="repos.kindTelegram">Telegram</span>
-            <h3 data-i18n="repos.buildTitle">Build your own notes</h3>
-            <p data-i18n="repos.buildText">Any term, any course, any university — request a custom audio podcast of your own material.</p>
-            <a href="https://t.me/medcardy_podcast/493" data-i18n="repos.openLink">Open link</a>
-          </article>
-          <article class="repo-card" data-kind="platform">
-            <span class="repo-kind" data-i18n="repos.kindPlatform">Platform</span>
-            <h3>medcardy.com</h3>
-            <p data-i18n="repos.siteText">Question packs, exam review, and flashcards alongside the podcast.</p>
-            <a href="https://medcardy.com" data-i18n="repos.openLink">Open link</a>
-          </article>
-        </div>
-        <p class="empty-state" hidden data-i18n="repos.empty">No links match this search.</p>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p data-i18n="footer.text">MedCardy — an audio podcast for medical books and course sessions.</p>
-      <a href="https://t.me/medcardy_podcast" data-i18n="footer.telegram">Telegram channel</a>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="مدکاردی؛ پادکست‌های آموزشی پزشکی، خلاصه کتاب‌ها و مرور دوره‌ها از علوم پایه تا استاجری.">
+<meta name="theme-color" content="#07151c"><meta property="og:title" content="MedCardy | مدکاردی"><meta property="og:description" content="از اول ترم تا شب امتحان، همراه با مدکاردی"><meta property="og:image" content="assets/medcardy-brand.jpg">
+<title>MedCardy | مدکاردی</title>
+<link rel="icon" href="assets/medcardy-logo.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#courses" data-fa="رفتن به دوره‌ها" data-en="Skip to courses">رفتن به دوره‌ها</a>
+<header class="header glass">
+<a class="brand" href="#top" aria-label="MedCardy"><img src="assets/medcardy-logo.svg" alt="" width="44" height="44"><span dir="ltr">MedCardy<span class="brand-sub">MEDICAL AUDIO LEARNING</span></span></a>
+<nav id="navigation" aria-label="منوی اصلی"><a href="#courses" data-fa="دوره‌ها" data-en="Courses">دوره‌ها</a><a href="#services" data-fa="خدمات مدکاردی" data-en="Services">خدمات مدکاردی</a><a href="#about" data-fa="درباره ما" data-en="About">درباره ما</a></nav>
+<div class="header-actions"><button class="language" type="button" aria-label="Switch to English">EN</button><a class="header-contact" href="https://t.me/MedCardy_Service" data-fa="ارتباط با ما ↗" data-en="Contact us ↗">ارتباط با ما ↗</a><button class="menu" type="button" aria-controls="navigation" aria-expanded="false" aria-label="باز کردن منو"><span></span><span></span></button></div>
+</header>
+<main id="top">
+<section class="hero container">
+<div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span><span data-fa="یادگیری پزشکی، با ریتم تو" data-en="Medical learning, at your pace">یادگیری پزشکی، با ریتم تو</span></p><h1 data-fa="کمتر ورق بزن،" data-en="Turn fewer pages.">کمتر ورق بزن،</h1><h1 class="accent" data-fa="بیشتر یاد بگیر." data-en="Learn more.">بیشتر یاد بگیر.</h1><p class="intro" data-fa="کتاب‌های پزشکی و جزوه‌های دانشگاهت را بشنو. از اولین جلسهٔ ترم تا آخرین مرور شب امتحان، مدکاردی همراه توست." data-en="Listen to your medical textbooks and university notes. From the first lecture to your final exam review, MedCardy is with you.">کتاب‌های پزشکی و جزوه‌های دانشگاهت را بشنو. از اولین جلسهٔ ترم تا آخرین مرور شب امتحان، مدکاردی همراه توست.</p><div class="hero-actions"><a class="button primary" href="#courses"><span data-fa="کشف دوره‌ها" data-en="Explore courses">کشف دوره‌ها</span><span>↙</span></a><a class="button secondary" href="https://t.me/medcardy_podcast"><span class="play-small">▶</span><span data-fa="کانال پادکست" data-en="Podcast channel">کانال پادکست</span></a></div><div class="hero-stats"><div><strong id="totalCourses">۳۷</strong><span data-fa="دوره و مجموعه" data-en="Courses & collections">دوره و مجموعه</span></div><div><strong>۵</strong><span data-fa="مسیر آموزشی" data-en="Learning paths">مسیر آموزشی</span></div><div><strong>۴</strong><span data-fa="دانشگاه" data-en="Universities">دانشگاه</span></div></div></div>
+<div class="hero-art" aria-label="هویت مدکاردی"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="brand-panel glass"><span class="panel-top">THE SOUND OF LEARNING <span>✦</span></span><img class="hero-logo" src="assets/medcardy-logo.svg" alt="نشان کارت‌های پزشکی مدکاردی" width="180" height="180"><strong dir="ltr">MedCardy</strong><span class="panel-sub" data-fa="پزشکی را بشنو." data-en="Listen. Learn. Remember.">پزشکی را بشنو.</span><div class="wave" aria-hidden="true"></div><div class="panel-bottom"><span>MEDCARDY PODCAST</span><span class="live-dot"></span></div></div><div class="floating-note glass"><span class="note-icon">♫</span><span data-fa="هر جا که هستی، یاد بگیر" data-en="Learn wherever you are">هر جا که هستی، یاد بگیر</span></div><div class="floating-tag glass"><span class="live-dot"></span><span data-fa="از علوم پایه تا بالین" data-en="From basics to clinical">از علوم پایه تا بالین</span></div></div>
+</section>
+<section class="container quick-access" id="services" aria-label="دسترسی سریع"><a class="service-card glass" href="https://t.me/medcardy/111"><span class="service-icon">◈</span><div><span class="eyebrow" dir="ltr">MEDCARDY UNIVERSITY</span><h2 data-fa="یک ترم، کنار هم" data-en="A whole term, together">یک ترم، کنار هم</h2><p data-fa="اشتراک ترمی و سفارش گروهی؛ از اول ترم تا شب امتحان" data-en="Term subscriptions and group orders, through exam night">اشتراک ترمی و سفارش گروهی؛ از اول ترم تا شب امتحان</p></div><span class="arrow">↗</span></a><a class="service-card glass" href="https://t.me/medcardy_podcast/493"><span class="service-icon violet">♬</span><div><span class="eyebrow" dir="ltr">MADE FOR YOUR NOTES</span><h2 data-fa="جزوهٔ تو، پادکست تو" data-en="Your notes. Your podcast.">جزوهٔ تو، پادکست تو</h2><p data-fa="هر ترمی، هر درسی، هر دانشگاهی؛ پادکست جزوهٔ خودت را بساز" data-en="Any term, any course, any university. Turn your notes into audio.">هر ترمی، هر درسی، هر دانشگاهی؛ پادکست جزوهٔ خودت را بساز</p></div><span class="arrow">↗</span></a></section>
+<section class="container catalog" id="courses"><div class="section-heading"><div><p class="eyebrow" data-fa="کتابخانهٔ شنیداری تو" data-en="YOUR AUDIO LIBRARY">کتابخانهٔ شنیداری تو</p><h2 data-fa="درس بعدی‌ات را پیدا کن." data-en="Find your next course.">درس بعدی‌ات را پیدا کن.</h2></div><p data-fa="یک مسیر انتخاب کن؛ بقیه‌اش با ما." data-en="Choose your path. We’ll take it from here.">یک مسیر انتخاب کن؛ بقیه‌اش با ما.</p></div>
+<div class="catalog-tools glass"><div class="search-row"><label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="course-search" aria-label="جست‌وجوی دوره" placeholder="اسم درس یا دانشگاهت را جست‌وجو کن…" autocomplete="off"><kbd>/</kbd></label><label class="university-label"><span class="sr-only" data-fa="دانشگاه" data-en="University">دانشگاه</span><select id="university"><option value="all">همهٔ دانشگاه‌ها</option></select></label></div><div class="categories" id="categoryFilters" aria-label="مقطع آموزشی"></div></div>
+<div class="results-row"><p id="archiveCount" role="status"></p><button type="button" id="reset" hidden data-fa="پاک کردن فیلترها ×" data-en="Clear filters ×">پاک کردن فیلترها ×</button><span class="results-hint" data-fa="هر دوره، یک قدم جلوتر" data-en="Every course, a step forward">هر دوره، یک قدم جلوتر</span></div><div id="archiveGrid" class="course-grid"></div><div class="empty glass" id="archiveEmpty" hidden><span>⌕</span><h3 data-fa="دوره‌ای پیدا نشد" data-en="No courses found">دوره‌ای پیدا نشد</h3><p data-fa="عبارت دیگری را جست‌وجو کن یا فیلترها را تغییر بده." data-en="Try another search or change your filters.">عبارت دیگری را جست‌وجو کن یا فیلترها را تغییر بده.</p><button class="button secondary" id="empty-reset" type="button" data-fa="نمایش همهٔ دوره‌ها" data-en="Show all courses">نمایش همهٔ دوره‌ها</button></div><noscript><p>برای جست‌وجوی دوره‌ها جاوااسکریپت را فعال کنید یا <a href="https://t.me/medcardy_podcast/151">فهرست دوره‌ها در تلگرام</a> را ببینید.</p></noscript>
+</section>
+<section class="container about-section" id="about"><div class="about-mark glass"><img src="assets/medcardy-logo.svg" alt="" width="64" height="64"><span dir="ltr">LEARN. LISTEN. REPEAT.</span></div><div><p class="eyebrow" data-fa="دربارهٔ مدکاردی" data-en="ABOUT MEDCARDY">دربارهٔ مدکاردی</p><h2 data-fa="همراه روزهای پزشکی تو." data-en="Alongside your medical journey.">همراه روزهای پزشکی تو.</h2><p data-fa="مدکاردی، خلاصهٔ شنیداری کتاب‌ها و جلسات درسی پزشکی است؛ برای وقت‌هایی که می‌خواهی یادگیری در جریان باشد. پروژه‌ای از محمدحسین کاظمی و بنیامین ذوالفقاری." data-en="MedCardy brings medical textbooks and lectures into audio, so you can keep learning on the move. A project by Mohammad Hossein Kazemi and Benjamin Zolfaghari.">مدکاردی، خلاصهٔ شنیداری کتاب‌ها و جلسات درسی پزشکی است؛ برای وقت‌هایی که می‌خواهی یادگیری در جریان باشد. پروژه‌ای از محمدحسین کاظمی و بنیامین ذوالفقاری.</p></div><a class="text-link" href="https://medcardy.com" data-fa="پلتفرم مدکاردی ↗" data-en="MedCardy platform ↗">پلتفرم مدکاردی ↗</a></section>
+<section class="container final-cta glass"><div><p class="eyebrow" data-fa="صدای قدم بعدی تو" data-en="YOUR NEXT STEP">صدای قدم بعدی تو</p><h2 data-fa="آماده‌ای با هم شروع کنیم؟" data-en="Ready to get started?">آماده‌ای با هم شروع کنیم؟</h2><p data-fa="برای سفارش پادکست و راهنمایی اشتراک، به ما پیام بده." data-en="Message us for custom podcasts and subscription guidance.">برای سفارش پادکست و راهنمایی اشتراک، به ما پیام بده.</p></div><a class="button primary" href="https://t.me/MedCardy_Service" data-fa="گفت‌وگو با مدکاردی ↗" data-en="Talk to MedCardy ↗">گفت‌وگو با مدکاردی ↗</a></section>
+</main>
+<footer class="container"><a class="brand" href="#top"><img src="assets/medcardy-logo.svg" alt="" width="36" height="36"><span dir="ltr">MedCardy</span></a><p data-fa="از اول ترم تا شب امتحان، همراه با ما." data-en="From the first lecture to exam night.">از اول ترم تا شب امتحان، همراه با ما.</p><div><a href="https://t.me/medcardy">MedCardy ↗</a><a href="https://t.me/medcardy_podcast/151">Podcast ↗</a></div></footer>
+<script src="script.js"></script>
+</body></html>
